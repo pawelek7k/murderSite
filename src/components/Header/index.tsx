@@ -1,5 +1,10 @@
+import { Logo } from "../Logo";
 import { StyledHeader } from "./Styles";
 
 export const Header = () => {
-  return <StyledHeader>Logo</StyledHeader>;
+  return (
+    <StyledHeader>
+      <Logo />
+    </StyledHeader>
+  );
 };
