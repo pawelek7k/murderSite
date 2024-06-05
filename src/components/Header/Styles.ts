@@ -7,7 +7,7 @@ justify-content: center;
 background-color: var(--background-blur);
 backdrop-filter: blur(5px);
 align-items: center;
-padding: 2rem;
+padding: 1rem;
 position: fixed;
 width: 100%;
 top: 0;

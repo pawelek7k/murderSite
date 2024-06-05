@@ -5,13 +5,14 @@ export const StyledLogo = styled.h1`
 font-family: var(--secondary-font);
 font-weight: 500;
 letter-spacing: 2px;
-
+text-align: center;
 span {
     color: var(--secondary);
     border-bottom: thin solid var(--secondary);
     background: linear-gradient(90deg, var(--accent), var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
 }
 
 `
@@ -21,7 +22,8 @@ font-family: var(--primary-font);
     color: var(--secondary-text);
     background: linear-gradient(90deg, var(--text), var(--primary));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;`
+    -webkit-text-fill-color: transparent;
+    `
 
 export const LogoWrapper = styled.div`
 display: flex;
