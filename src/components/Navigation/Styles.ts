@@ -14,6 +14,7 @@ left: 50%;
 transform: translateX(-50%);
 border-radius: var(--border-radius);
 padding: 1rem 4rem;
+z-index: 999;
 `
 export const ListNavigation = styled.ul`
 display: flex;

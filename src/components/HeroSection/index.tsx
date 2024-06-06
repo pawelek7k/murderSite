@@ -9,6 +9,7 @@ import { LookUp } from "../LookUp";
 import { Paragraph } from "../Paragraph";
 import {
   HeadingWrapper,
+  ImageContainer,
   Section,
   StyledWrapperLink,
   StyledWrapperLogos,
@@ -18,36 +19,39 @@ export const Hero = () => {
   return (
     <>
       <Section>
-        <motion.div
-          className="p-6 bg-white rounded-md shadow-md"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <StyledWrapperLogos>
-            <Image src={AngelLeft} alt={"ok"} width={200} />
+        <ImageContainer>
+          <motion.div
+            className="p-6 bg-white rounded-md shadow-md"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <StyledWrapperLogos>
+              <Image src={AngelLeft} alt={"ok"} width={200} />
 
-            <StyledWrapperLink>
-              <Image
-                src={LogoIlluminati}
-                alt={"conspiracy theory logo"}
-                width={100}
-              />
+              <StyledWrapperLink>
+                <Image
+                  src={LogoIlluminati}
+                  alt={"conspiracy theory logo"}
+                  width={100}
+                />
 
-              <LookUp link={""} content={"learn more"} />
-              <ImArrowDown2 className="ArrowDown" />
-            </StyledWrapperLink>
+                <LookUp link={""} content={"learn more"} />
+                <ImArrowDown2 className="ArrowDown" />
+              </StyledWrapperLink>
 
-            <Image src={AngelRight} alt={"ok"} width={200} />
-          </StyledWrapperLogos>
-        </motion.div>
-        <HeadingWrapper>
-          <Paragraph
-            content={
-              " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptatem aliquam excepturi possimus dolorum itaque amet, "
-            }
-          />
-          <Heading content={"Odsłona ludzkiej natury."} />
-        </HeadingWrapper>
+              <Image src={AngelRight} alt={"ok"} width={200} />
+            </StyledWrapperLogos>
+          </motion.div>
+
+          <HeadingWrapper>
+            <Paragraph
+              content={
+                " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptatem aliquam excepturi possimus dolorum itaque amet, "
+              }
+            />
+            <Heading content={"Odsłona ludzkiej natury."} />
+          </HeadingWrapper>
+        </ImageContainer>
       </Section>
     </>
   );

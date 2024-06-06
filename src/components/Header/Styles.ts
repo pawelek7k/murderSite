@@ -10,6 +10,7 @@ align-items: center;
 padding: 1rem;
 position: fixed;
 width: 100%;
+z-index: 999;
 border-bottom: var(--border);
 top: 0;
 `

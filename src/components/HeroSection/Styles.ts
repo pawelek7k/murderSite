@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import backgroundImage from '../../images/hero_bg.jpg';
 
 
 export const StyledWrapperLink = styled.div`
@@ -25,3 +26,13 @@ export const Section = styled.section`
 height: 100vh;
 padding-top: 9rem;
 `
+
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 73%) 20%, var(--background) 40%),
+    url(${backgroundImage});
+  background-size: cover;
+  background-position: center;
+`;
