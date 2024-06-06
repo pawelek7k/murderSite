@@ -9,4 +9,6 @@
   --accent: #a2828d;
   --secondary-font: "Bebas Neue", sans-serif;
   --primary-font: "PT Sans", sans-serif;
+  --transition: 250ms ease-in-out;
+  --blur: blur(5px);
 }

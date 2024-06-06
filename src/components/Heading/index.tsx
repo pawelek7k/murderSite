@@ -1,7 +1,9 @@
+import { StyledHeading } from "./Styles";
+
 interface HeadingProps {
   content: string;
 }
 
 export const Heading = ({ content }: HeadingProps) => {
-  return <h1>{content}</h1>;
+  return <StyledHeading>{content}</StyledHeading>;
 };
