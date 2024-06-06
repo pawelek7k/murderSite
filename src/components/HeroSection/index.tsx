@@ -25,21 +25,22 @@ export const Hero = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <StyledWrapperLogos>
-              <Image src={AngelLeft} alt={"ok"} width={200} />
+            <StyledWrapperLogos $res={false}>
+              <Image src={AngelLeft} alt={"ok"} width={200} res={true} />
 
               <StyledWrapperLink>
                 <Image
                   src={LogoIlluminati}
                   alt={"conspiracy theory logo"}
                   width={100}
+                  res={false}
                 />
 
                 <LookUp link={""} content={"learn more"} />
                 <ImArrowDown2 className="ArrowDown" />
               </StyledWrapperLink>
 
-              <Image src={AngelRight} alt={"ok"} width={200} />
+              <Image src={AngelRight} alt={"ok"} width={200} res={true} />
             </StyledWrapperLogos>
           </motion.div>
 

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const StyledNavigation = styled.div`
 display: flex;
 align-items: center;
+justify-content: center;
 gap: var(--spacing);
 background-color: var(--background-blur);
 backdrop-filter: var(--blur);
@@ -15,6 +16,17 @@ transform: translateX(-50%);
 border-radius: var(--border-radius);
 padding: 1rem 4rem;
 z-index: 999;
+
+@media screen and (max-width: 600px) {
+padding: 1rem 0rem;
+width: 100%;
+bottom: 0;
+left: 0;
+transform: translateX(0);
+border-radius: 0rem;
+border: none;
+border-top: var(--border);
+}
 `
 export const ListNavigation = styled.ul`
 display: flex;

@@ -7,12 +7,15 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-}
+
 `
-export const StyledWrapperLogos = styled.div`
+export const StyledWrapperLogos = styled.div<{ $res?: boolean }>`
 display: flex;
 justify-content: space-between;
 padding: 0 1rem;
+@media screen and (max-width: 600px) {
+display: ${props => props.$res ? 'none' : 'block'}
+}
 
 `
 
