@@ -1,4 +1,5 @@
 import { Hero } from "../components/HeroSection";
+import { Introduction } from "../components/IntroductionSection";
 import { ContainerStyles } from "./styles/styles";
 
 export const Home = () => {
@@ -6,6 +7,7 @@ export const Home = () => {
     <>
       <ContainerStyles>
         <Hero />
+        <Introduction />
       </ContainerStyles>
     </>
   );
