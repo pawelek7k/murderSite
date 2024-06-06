@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { ImArrowDown2 } from "react-icons/im";
 import AngelLeft from "../../images/angelLeft.png";
 import AngelRight from "../../images/angelRight.png";
@@ -11,18 +12,35 @@ export const Hero = () => {
   return (
     <>
       <StyledWrapperLogos>
-        <Image src={AngelLeft} alt={"ok"} width={200} />
-
+        <motion.div
+          className="p-6 bg-white rounded-md shadow-md"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <Image src={AngelLeft} alt={"ok"} width={200} />
+        </motion.div>
         <StyledWrapperLink>
-          <Image
-            src={LogoIlluminati}
-            alt={"conspiracy theory logo"}
-            width={100}
-          />
+          <motion.div
+            className="p-6 bg-white rounded-md shadow-md"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <Image
+              src={LogoIlluminati}
+              alt={"conspiracy theory logo"}
+              width={100}
+            />
+          </motion.div>
           <LookUp link={""} content={"learn more"} />
           <ImArrowDown2 className="ArrowDown" />
         </StyledWrapperLink>
-        <Image src={AngelRight} alt={"ok"} width={200} />
+        <motion.div
+          className="p-6 bg-white rounded-md shadow-md"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <Image src={AngelRight} alt={"ok"} width={200} />
+        </motion.div>
       </StyledWrapperLogos>
       <Heading content={"Odsłona ludzkiej natury."} />
     </>
