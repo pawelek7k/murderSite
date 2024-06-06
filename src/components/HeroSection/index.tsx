@@ -12,6 +12,7 @@ export const Hero = () => {
     <>
       <StyledWrapperLogos>
         <Image src={AngelLeft} alt={"ok"} width={200} />
+
         <StyledWrapperLink>
           <Image
             src={LogoIlluminati}
