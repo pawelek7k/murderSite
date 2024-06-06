@@ -10,5 +10,6 @@ align-items: center;
 padding: 1rem;
 position: fixed;
 width: 100%;
+border-bottom: var(--border);
 top: 0;
 `

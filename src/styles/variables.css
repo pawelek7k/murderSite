@@ -11,4 +11,7 @@
   --primary-font: "PT Sans", sans-serif;
   --transition: 250ms ease-in-out;
   --blur: blur(5px);
+  --border: thin solid var(--secondary);
+  --spacing: 2rem;
+  --border-radius: 2rem;
 }
