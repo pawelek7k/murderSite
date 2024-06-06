@@ -20,11 +20,15 @@ export const HeadingWrapper = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-end;
+ position: absolute;
+ bottom: 20%;
+ right: 5%;
 `
 
 export const Section = styled.section`
 height: 100vh;
 padding-top: 9rem;
+position: relative;
 `
 
 export const ImageContainer = styled.div`
