@@ -9,7 +9,6 @@ import { LookUp } from "../LookUp";
 import { Paragraph } from "../Paragraph";
 import {
   HeadingWrapper,
-  ImageContainer,
   Section,
   StyledWrapperLink,
   StyledWrapperLogos,
@@ -19,40 +18,38 @@ export const Hero = () => {
   return (
     <>
       <Section>
-        <ImageContainer>
-          <motion.div
-            className="p-6 bg-white rounded-md shadow-md"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <StyledWrapperLogos $res={false}>
-              <Image src={AngelLeft} alt={"ok"} width={200} res={true} />
+        <motion.div
+          className="p-6 bg-white rounded-md shadow-md"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <StyledWrapperLogos $res={false}>
+            <Image src={AngelLeft} alt={"ok"} width={200} res={true} />
 
-              <StyledWrapperLink>
-                <Image
-                  src={LogoIlluminati}
-                  alt={"conspiracy theory logo"}
-                  width={100}
-                  res={false}
-                />
+            <StyledWrapperLink>
+              <Image
+                src={LogoIlluminati}
+                alt={"conspiracy theory logo"}
+                width={100}
+                res={false}
+              />
 
-                <LookUp link={""} content={"learn more"} />
-                <ImArrowDown2 className="ArrowDown" />
-              </StyledWrapperLink>
+              <LookUp link={""} content={"learn more"} />
+              <ImArrowDown2 className="ArrowDown" />
+            </StyledWrapperLink>
 
-              <Image src={AngelRight} alt={"ok"} width={200} res={true} />
-            </StyledWrapperLogos>
-          </motion.div>
+            <Image src={AngelRight} alt={"ok"} width={200} res={true} />
+          </StyledWrapperLogos>
+        </motion.div>
 
-          <HeadingWrapper>
-            <Paragraph
-              content={
-                " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptatem aliquam excepturi possimus dolorum itaque amet, "
-              }
-            />
-            <Heading content={"A revelation of human nature."} />
-          </HeadingWrapper>
-        </ImageContainer>
+        <HeadingWrapper>
+          <Paragraph
+            content={
+              " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptatem aliquam excepturi possimus dolorum itaque amet, "
+            }
+          />
+          <Heading content={"A revelation of human nature."} />
+        </HeadingWrapper>
       </Section>
     </>
   );
