@@ -1,6 +1,5 @@
 import { Header } from "./components/Header";
-import { Home } from "./pages/Home";
-import { ContainerStyles } from "./pages/styles/styles";
+import { RouterIndex } from "./routes/RouterIndex";
 import "./styles/animations.css";
 import "./styles/App.css";
 import "./styles/variables.css";
@@ -9,9 +8,7 @@ function App() {
   return (
     <>
       <Header />
-      <ContainerStyles>
-        <Home />
-      </ContainerStyles>
+      <RouterIndex />
     </>
   );
 }

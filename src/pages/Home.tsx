@@ -1,9 +1,12 @@
 import { Hero } from "../components/HeroSection";
+import { ContainerStyles } from "./styles/styles";
 
 export const Home = () => {
   return (
     <>
-      <Hero />
+      <ContainerStyles>
+        <Hero />
+      </ContainerStyles>
     </>
   );
 };
