@@ -8,3 +8,9 @@ align-items: center;
 justify-content: center;
 }
 `
+export const StyledWrapperLogos = styled.div`
+display: flex;
+justify-content: space-between;
+padding: 0 1rem;
+
+`
