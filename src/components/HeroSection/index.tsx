@@ -18,37 +18,28 @@ export const Hero = () => {
   return (
     <>
       <Section>
-        <StyledWrapperLogos>
-          <motion.div
-            className="p-6 bg-white rounded-md shadow-md"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
+        <motion.div
+          className="p-6 bg-white rounded-md shadow-md"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <StyledWrapperLogos>
             <Image src={AngelLeft} alt={"ok"} width={200} />
-          </motion.div>
-          <StyledWrapperLink>
-            <motion.div
-              className="p-6 bg-white rounded-md shadow-md"
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
+
+            <StyledWrapperLink>
               <Image
                 src={LogoIlluminati}
                 alt={"conspiracy theory logo"}
                 width={100}
               />
-            </motion.div>
-            <LookUp link={""} content={"learn more"} />
-            <ImArrowDown2 className="ArrowDown" />
-          </StyledWrapperLink>
-          <motion.div
-            className="p-6 bg-white rounded-md shadow-md"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
+
+              <LookUp link={""} content={"learn more"} />
+              <ImArrowDown2 className="ArrowDown" />
+            </StyledWrapperLink>
+
             <Image src={AngelRight} alt={"ok"} width={200} />
-          </motion.div>
-        </StyledWrapperLogos>
+          </StyledWrapperLogos>
+        </motion.div>
         <HeadingWrapper>
           <Paragraph
             content={
