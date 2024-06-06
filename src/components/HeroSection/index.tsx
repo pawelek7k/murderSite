@@ -49,7 +49,7 @@ export const Hero = () => {
                 " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptatem aliquam excepturi possimus dolorum itaque amet, "
               }
             />
-            <Heading content={"Odsłona ludzkiej natury."} />
+            <Heading content={"A revelation of human nature."} />
           </HeadingWrapper>
         </ImageContainer>
       </Section>

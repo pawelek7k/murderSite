@@ -1,3 +1,4 @@
+import Typewriter from "../TypeWriter";
 import { StyledHeading } from "./Styles";
 
 interface HeadingProps {
@@ -5,5 +6,9 @@ interface HeadingProps {
 }
 
 export const Heading = ({ content }: HeadingProps) => {
-  return <StyledHeading>{content}</StyledHeading>;
+  return (
+    <StyledHeading>
+      <Typewriter text={content} delay={100} />{" "}
+    </StyledHeading>
+  );
 };
