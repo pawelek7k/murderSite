@@ -29,6 +29,9 @@ export const Section = styled.section`
 height: 100vh;
 padding-top: 9rem;
 position: relative;
+  -webkit-user-select: none; /* Safari /
+  -ms-user-select: none; / IE 10 and IE 11 /
+  user-select: none; / Standard syntax */
 `
 
 export const ImageContainer = styled.div`
