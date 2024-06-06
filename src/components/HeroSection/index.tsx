@@ -1,3 +1,4 @@
+import { ImArrowDown2 } from "react-icons/im";
 import { Heading } from "../Heading";
 import { Image } from "../Image";
 import { LookUp } from "../LookUp";
@@ -13,6 +14,7 @@ export const Hero = () => {
           width={200}
         />
         <LookUp link={""} content={"learn more"} />
+        <ImArrowDown2 className="ArrowDown" />
       </StyledWrapperLink>
       <Heading content={"Odsłona ludzkiej natury."} />
     </>

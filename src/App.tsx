@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
 import { ContainerStyles } from "./pages/styles/styles";
+import "./styles/animations.css";
 import "./styles/App.css";
 import "./styles/variables.css";
 
