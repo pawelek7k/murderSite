@@ -7,17 +7,9 @@ interface DataItem {
   content: string;
 }
 
-const variant = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 export const List = () => {
   return (
-    <ListStyles variants={variant} initial="initial" animate="animate">
+    <ListStyles>
       {paragraphs.map((p: DataItem) => (
         <Item key={p.id} content={p.content} />
       ))}

@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
 import styled from 'styled-components';
 
-export const ListStyles = styled(motion.ul)`
+export const ListStyles = styled.ul`
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
