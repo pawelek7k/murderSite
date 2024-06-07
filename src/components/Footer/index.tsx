@@ -4,7 +4,7 @@ import { StyledFooter } from "./Styles";
 export const Footer = () => {
   return (
     <StyledFooter>
-      <Logo />
+      <Logo positionOnPage={false} />
     </StyledFooter>
   );
 };

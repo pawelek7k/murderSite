@@ -1,8 +1,12 @@
 import { LogoWrapper, StyledCaption, StyledLogo } from "./Styles";
 
-export const Logo = () => {
+interface LogoProps {
+  positionOnPage: boolean;
+}
+
+export const Logo = ({ positionOnPage }: LogoProps) => {
   return (
-    <LogoWrapper>
+    <LogoWrapper $positionOnPage={positionOnPage}>
       <a>
         <StyledLogo>
           Ice<span>berg</span>
