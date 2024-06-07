@@ -1,10 +1,19 @@
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { Slider } from "../Slider";
+import {
+  StyledQuoteIconLeft,
+  StyledQuoteIconRight,
+  StyledQuotes,
+} from "./Styles";
 
 export const Quotes = () => {
   return (
     <>
-      <h2>quotes</h2>
-      <Slider />
+      <StyledQuotes>
+        <StyledQuoteIconLeft />
+        <Slider />
+        <StyledQuoteIconRight />
+      </StyledQuotes>
     </>
   );
 };
