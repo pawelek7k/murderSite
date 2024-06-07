@@ -22,6 +22,7 @@ h3 {
 p {
     letter-spacing: 1px;
     max-width: 300px;
+    font-family: var(--third-font);
 }
 
 `;

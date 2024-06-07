@@ -14,6 +14,7 @@ export const ListStyles = styled.ul`
     z-index: 2;
     position: relative;
     padding-left: 2rem;
+    font-family: var(--third-font);
 
     &::after {
     content: '';

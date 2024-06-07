@@ -17,8 +17,8 @@ span {
 
 `
 export const StyledCaption = styled.h2`
-font-family: var(--primary-font);
-
+    font-family: var(--third-font);
+    font-size: 1.2rem;
     color: var(--secondary-text);
     background: linear-gradient(90deg, var(--text), var(--primary));
     -webkit-background-clip: text;

@@ -45,7 +45,7 @@ export const Hero = () => {
         <HeadingWrapper>
           <Paragraph
             content={
-              " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptatem aliquam excepturi possimus dolorum itaque amet, "
+              " Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
             }
           />
           <Heading content={"A revelation of human nature."} />
