@@ -1,4 +1,4 @@
-import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
+import { Heading } from "../Heading/h2";
 import { Slider } from "../Slider";
 import {
   StyledQuoteIconLeft,
@@ -10,6 +10,7 @@ export const Quotes = () => {
   return (
     <>
       <StyledQuotes>
+        <Heading content={"Quotes"} visually={false} />
         <StyledQuoteIconLeft />
         <Slider />
         <StyledQuoteIconRight />

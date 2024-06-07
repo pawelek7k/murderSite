@@ -1,4 +1,4 @@
-import Typewriter from "../TypeWriter";
+import Typewriter from "../../TypeWriter";
 import { StyledHeading } from "./Styles";
 
 interface HeadingProps {
