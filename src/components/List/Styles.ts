@@ -3,19 +3,18 @@ import styled from 'styled-components';
 
 export const ListStyles = styled(motion.ul)`
   display: flex;
+  flex-direction: column;
   margin-top: 2rem;
   gap: 1.5rem;
-  font-weight: 600;
+  border: var(--border);
 
   li {
     font-size: 1.3rem;
-    color: var(--secondary);
+    color: var(--primary);
     z-index: 2;
 
     .first-word {
-      -webkit-text-fill-color: var(--pure-white);
-      background: linear-gradient(90deg, var(--primary), var(--primary));
-      -webkit-background-clip: text;
+      color: var(--text);
       font-family: var(--secondary-font);
       letter-spacing: 2px;
       font-size: 1.7rem;

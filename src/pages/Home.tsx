@@ -1,4 +1,5 @@
 import { Hero } from "../components/HeroSection";
+import { Introduction } from "../components/IntroductionSection";
 import { Quotes } from "../components/QuotesSection";
 import { ContainerStyles } from "./styles/styles";
 
@@ -8,7 +9,7 @@ export const Home = () => {
       <ContainerStyles>
         <Hero />
         <Quotes />
-        {/* <Introduction /> */}
+        <Introduction />
       </ContainerStyles>
     </>
   );
