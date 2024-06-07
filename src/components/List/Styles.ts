@@ -6,6 +6,8 @@ export const ListStyles = styled(motion.ul)`
   flex-direction: column;
   margin-top: 2rem;
   gap: 1.5rem;
+  padding: 3rem;
+  border-radius: var(--border-radius);
   border: var(--border);
 
   li {

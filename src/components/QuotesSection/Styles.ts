@@ -6,17 +6,17 @@ position: relative;
 `;
 
 export const StyledQuoteIconLeft = styled(RiDoubleQuotesL)`
-  color: var(--secondary);
+  color: var(--text);
   position: absolute;
-  top: 0;
+  top: 15%;
   left: 10%;
   font-size: 3rem;
 `;
 
 export const StyledQuoteIconRight = styled(RiDoubleQuotesR)`
-  color: var(--secondary);
+  color: var(--text);
   font-size: 3rem;
   position: absolute;
-  bottom: 0;
+  bottom: 15%;
   right: 10%;
 `;
