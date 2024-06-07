@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledButton = styled.button`
-padding: 15px 20px;
+  padding: 15px 20px;
   font-size: 1.2rem;
   font-family: var(--secondary-font);
   letter-spacing: 2px;
