@@ -1,3 +1,5 @@
+import { Slider } from "../Slider";
+
 export const Quotes = () => {
-  return <h1>ok</h1>;
+  return <Slider />;
 };

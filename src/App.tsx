@@ -2,6 +2,7 @@ import { Header } from "./components/Header";
 import { RouterIndex } from "./routes/RouterIndex";
 import "./styles/animations.css";
 import "./styles/App.css";
+import "./styles/slider.css";
 import "./styles/variables.css";
 
 function App() {
