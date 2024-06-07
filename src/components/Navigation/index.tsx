@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { ListNavigation, StyledNavigation } from "./Styles";
-import { GiBurningSkull } from "react-icons/gi";
+import { RiKnifeBloodFill } from "react-icons/ri";
 
 export const Navigation = () => {
   return (
     <StyledNavigation>
-      <GiBurningSkull />
+      <RiKnifeBloodFill />
       <nav>
         <ListNavigation>
           <li>
@@ -19,7 +19,7 @@ export const Navigation = () => {
           </li>
         </ListNavigation>
       </nav>
-      <GiBurningSkull />
+      <RiKnifeBloodFill />
     </StyledNavigation>
   );
 };
