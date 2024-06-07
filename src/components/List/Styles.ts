@@ -8,6 +8,8 @@ export const ListStyles = styled.ul`
 
   li {
     font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
     color: var(--primary);
     z-index: 2;
     position: relative;

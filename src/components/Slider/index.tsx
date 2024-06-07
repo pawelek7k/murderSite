@@ -3,27 +3,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-coverflow";
+import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { FreeMode, Pagination } from "swiper/modules";
 import { StyledSlider } from "./Styles";
 
 export const Slider = () => {
   return (
     <StyledSlider>
       <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        modules={[EffectCoverflow, Pagination]}
+        slidesPerView={3}
+        spaceBetween={30}
+        freeMode={true}
+        modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>

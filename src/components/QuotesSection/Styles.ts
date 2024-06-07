@@ -6,7 +6,7 @@ position: relative;
 `;
 
 export const StyledQuoteIconLeft = styled(RiDoubleQuotesL)`
-  color: var(--text);
+  color: var(--accent);
   position: absolute;
   top: 15%;
   left: 10%;
@@ -14,7 +14,7 @@ export const StyledQuoteIconLeft = styled(RiDoubleQuotesL)`
 `;
 
 export const StyledQuoteIconRight = styled(RiDoubleQuotesR)`
-  color: var(--text);
+  color: var(--accent);
   font-size: 3rem;
   position: absolute;
   bottom: 15%;

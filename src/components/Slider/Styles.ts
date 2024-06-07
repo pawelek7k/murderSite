@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const StyledSlider = styled.div`
+
 .swiper {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 100px;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
+  width: 200px;
 }
 
 h3 {
@@ -21,6 +21,7 @@ h3 {
 
 p {
     letter-spacing: 1px;
+    max-width: 300px;
 }
 
 `;
