@@ -30,9 +30,9 @@ justify-content: flex-end;
 export const Section = styled.section`
 padding: 8rem 3rem;
 position: relative;
-  -webkit-user-select: none; /* Safari /
-  -ms-user-select: none; / IE 10 and IE 11 /
-  user-select: none; / Standard syntax */
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   width: 100%;
   height: 100vh;
   background: radial-gradient(circle at center, rgba(0, 0, 0, 73%) 10%, var(--background) 35%),

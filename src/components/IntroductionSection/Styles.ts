@@ -9,9 +9,6 @@ background: radial-gradient(circle at center, rgba(0, 0, 0, 73%) 15%, var(--back
 `
 
 export const Wrapper = styled.div`
-
-background: radial-gradient(circle at center, rgba(0, 0, 0, 73%) 50%, var(--background) 35%),
-    url(${Woman});
-  background-size: cover;
-  background-position: center;
+display: flex;
+justify-content: space-between;
 `

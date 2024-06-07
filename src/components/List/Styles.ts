@@ -2,17 +2,30 @@ import styled from 'styled-components';
 
 export const ListStyles = styled.ul`
   display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 3rem;
-  border-radius: var(--border-radius);
-  border: var(--border);
+  justify-content: center;
 
   li {
     font-size: 1.3rem;
     color: var(--primary);
     z-index: 2;
+    position: relative;
+    padding-left: 2rem;
+
+    &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--accent);
+    }
+
+    &:first-child::after {
+    content: none;
+}
 
     .first-word {
       color: var(--text);
