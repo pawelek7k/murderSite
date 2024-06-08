@@ -6,9 +6,9 @@ interface LogoProps {
 
 export const Logo = ({ positionOnPage }: LogoProps) => {
   return (
-    <LogoWrapper $positionOnPage={positionOnPage}>
+    <LogoWrapper>
       <a>
-        <StyledLogo>
+        <StyledLogo $positionOnPage={positionOnPage}>
           Ice<span>berg</span>
         </StyledLogo>
       </a>

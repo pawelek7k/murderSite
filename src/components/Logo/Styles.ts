@@ -4,9 +4,9 @@ import styled from 'styled-components';
 export const StyledLogo = styled.h1<{ $positionOnPage?: boolean; }>`
 font-family: var(--secondary-font);
 font-weight: 500;
-font-size: ${props => (props.$positionOnPage ? '3rem' : '2rem')};
+font-size: ${props => (props.$positionOnPage ? '2rem' : '3rem')};
 letter-spacing: 2px;
-text-align:  ${props => (props.$positionOnPage ? 'start' : 'center')};
+text-align:  ${props => (props.$positionOnPage ? 'center' : 'start')};
 span {
     color: var(--secondary);
     border-bottom: thin solid var(--secondary);
