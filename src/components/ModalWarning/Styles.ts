@@ -23,6 +23,7 @@ export const ModalContent = styled.div`
     max-width: 400px;
     overflow: hidden;
     text-align: center;
+
 `;
 
 export const CloseButton = styled.button`
@@ -39,6 +40,9 @@ export const HeadingWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background: linear-gradient(to right, var(--background), var(--primary-yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `
 
 export const Line = styled.div`
