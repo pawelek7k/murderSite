@@ -9,7 +9,6 @@ export const StyledSlider = styled.div`
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 200px;
 }
 
 h3 {
@@ -21,7 +20,6 @@ h3 {
 
 p {
     letter-spacing: 1px;
-    max-width: 300px;
     font-family: var(--third-font);
 }
 

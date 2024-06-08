@@ -5,6 +5,12 @@ export const ListStyles = styled.ul`
   gap: 2rem;
   padding: 3rem;
   justify-content: center;
+  flex-wrap: no-wrap;
+
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+    padding: 3rem 0rem;
+  }
 
   li {
     font-size: 1.3rem;
@@ -24,6 +30,9 @@ export const ListStyles = styled.ul`
     bottom: 0;
     width: 1px;
     background-color: var(--accent);
+     @media (max-width: 900px) {
+    content: none
+    }
     }
 
     &:first-child::after {

@@ -10,10 +10,10 @@ export const Introduction = () => {
     <>
       <StyledIntroduction>
         <Wrapper>
-          <Image src={AngelLeft} alt={"ok"} width={200} res={false} />
+          <Image src={AngelLeft} alt={"ok"} width={200} res={true} />
 
           <Heading content={"Come closer."} visually={true} />
-          <Image src={AngelRight} alt={"ok"} width={200} res={false} />
+          <Image src={AngelRight} alt={"ok"} width={200} res={true} />
         </Wrapper>
         <List />
       </StyledIntroduction>
