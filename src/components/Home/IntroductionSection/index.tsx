@@ -1,8 +1,8 @@
-import AngelLeft from "../../images/angelLeft.png";
-import AngelRight from "../../images/angelRight.png";
-import { Heading } from "../Heading/h2";
-import { Image } from "../Image";
-import { List } from "../List";
+import AngelLeft from "../../../images/angelLeft.png";
+import AngelRight from "../../../images/angelRight.png";
+import { Heading } from "../../Heading/h2";
+import { Image } from "../../Image";
+import { List } from "../../List";
 import { StyledIntroduction, Wrapper } from "./Styles";
 
 export const Introduction = () => {

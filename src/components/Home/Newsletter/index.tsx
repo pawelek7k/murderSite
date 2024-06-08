@@ -1,6 +1,6 @@
-import { Button } from "../Button";
-import { Heading } from "../Heading/h2";
-import { Paragraph } from "../Paragraph";
+import { Button } from "../../Button";
+import { Heading } from "../../Heading/h2";
+import { Paragraph } from "../../Paragraph";
 import { Section } from "./Styles";
 
 export const Newsletter = () => {

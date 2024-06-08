@@ -25,7 +25,7 @@ export const StyledButton = styled.button`
     transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  background: #28282d;
+  background: #2D0108;
   border-radius: 10px;
   }
 

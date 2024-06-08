@@ -10,7 +10,7 @@ text-align:  ${props => (props.$positionOnPage ? 'center' : 'start')};
 span {
     color: var(--secondary);
     border-bottom: thin solid var(--secondary);
-    background: linear-gradient(90deg, var(--accent), var(--primary));
+    background: linear-gradient(90deg, var(--accent), var(--primary-red));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

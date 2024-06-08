@@ -1,7 +1,7 @@
 import { GiDaggerRose } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import { Heading } from "../Heading/h2";
-import { Paragraph } from "../Paragraph";
+import { Heading } from "../../Heading/h2";
+import { Paragraph } from "../../Paragraph";
 import {
   CloseButton,
   HeadingWrapper,

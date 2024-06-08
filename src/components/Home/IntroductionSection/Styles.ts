@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Woman from "../../images/sunset.jpg";
+import Woman from "../../../images/sunset.jpg";
 
 export const StyledIntroduction = styled.section`
 padding: 15rem 3rem;

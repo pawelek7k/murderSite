@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import backgroundImage from '../../images/hero_bg.jpg';
+import backgroundImage from '../../../images/hero_bg.jpg';
 
 
 export const StyledWrapperLink = styled.div`

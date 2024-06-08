@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundImage from '../../images/news.jpg';
+import backgroundImage from '../../../images/news.jpg';
 
 export const Section = styled.section`
   background: linear-gradient(to bottom, var(--background) 0%, var(--background) 20%, rgba(0, 0, 0, 0.84) 100%), url(${backgroundImage});
@@ -10,4 +10,5 @@ export const Section = styled.section`
   flex-direction: column;
   gap: var(--spacing);
   align-items: center;
+  text-align: center;
 `

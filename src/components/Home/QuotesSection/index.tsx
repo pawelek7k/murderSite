@@ -1,5 +1,5 @@
-import { Heading } from "../Heading/h2";
-import { ParallaxText } from "../Parallax";
+import { Heading } from "../../Heading/h2";
+import { ParallaxText } from "../../Parallax";
 import { Slider } from "../Slider";
 import {
   StyledQuoteIconLeft,

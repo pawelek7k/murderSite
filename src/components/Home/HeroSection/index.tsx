@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { ImArrowDown2 } from "react-icons/im";
-import AngelLeft from "../../images/angelLeft.png";
-import AngelRight from "../../images/angelRight.png";
-import LogoIlluminati from "../../images/conspiracy_theory_logo.png";
-import { Heading } from "../Heading/h1";
-import { Image } from "../Image";
-import { LookUp } from "../LookUp";
-import { Paragraph } from "../Paragraph";
+import { Heading } from "../../Heading/h1";
+import { Image } from "../../Image";
+import AngelLeft from "../../../images/angelLeft.png";
+import AngelRight from "../../../images/angelRight.png";
+import LogoIlluminati from "../../../images/conspiracy_theory_logo.png";
+import { LookUp } from "../../LookUp";
+import { Paragraph } from "../../Paragraph";
 import {
   HeadingWrapper,
   Section,

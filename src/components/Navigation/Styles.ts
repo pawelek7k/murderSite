@@ -17,6 +17,10 @@ border-radius: var(--border-radius);
 padding: 1rem 4rem;
 z-index: 999;
 
+.active {
+    color: var(--primary);
+}
+
 @media screen and (max-width: 600px) {
 padding: 1rem 0rem;
 width: 100%;
