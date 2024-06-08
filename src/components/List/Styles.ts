@@ -30,7 +30,7 @@ export const ListStyles = styled.ul`
     bottom: 0;
     width: 1px;
     background-color: var(--accent);
-     @media (max-width: 900px) {
+    @media (max-width: 900px) {
     content: none
     }
     }

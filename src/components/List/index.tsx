@@ -11,7 +11,7 @@ export const List = () => {
   return (
     <ListStyles>
       {paragraphs.map((p: DataItem) => (
-        <Item key={p.id} content={p.content} />
+        <Item key={p.id} content={p.content} index={p.id} />
       ))}
     </ListStyles>
   );
