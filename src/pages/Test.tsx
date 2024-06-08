@@ -1,7 +1,9 @@
+import { Hero } from "../components/Test/HeroSection";
+
 export const Test = () => {
   return (
     <>
-      <h1>siema</h1>
+      <Hero />
     </>
   );
 };
