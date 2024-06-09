@@ -31,7 +31,7 @@ export const ParallaxText = ({
     clamp: false,
   });
 
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-20, -70, v)}%`);
 
   const directionFactor = useRef<number>(1);
   useAnimationFrame((_, delta) => {
