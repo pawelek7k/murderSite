@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navigation } from "../components/Navigation";
-import { Home } from "../pages/Home";
 import { Iceberg } from "../pages/Api";
+import { Home } from "../pages/Home";
 import { Test } from "../pages/Test";
 
 export const RouterIndex = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/murderSite">
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
