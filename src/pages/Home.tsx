@@ -4,7 +4,7 @@ import { Introduction } from "../components/Home/IntroductionSection";
 import { ModalWarning } from "../components/Home/ModalWarning";
 import { Newsletter } from "../components/Home/Newsletter";
 import { Quotes } from "../components/Home/QuotesSection";
-import { ContainerStyles } from "./styles/styles";
+import { Main } from "../components/Main";
 
 export const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -41,13 +41,13 @@ export const Home = () => {
 
   return (
     <>
-      <ContainerStyles>
+      <Main>
         <Hero />
         <Quotes />
         <Introduction />
         <Newsletter />
         <ModalWarning show={showModal} onClose={handleCloseModal} />
-      </ContainerStyles>
+      </Main>
     </>
   );
 };
