@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import AngelLeft from "../../../images/angelLeft.png";
 import AngelRight from "../../../images/angelRight.png";
-import { Button } from "../../Button";
 import { Heading } from "../../Heading/h1";
 import {
   HeadingWrapper,
@@ -10,6 +9,10 @@ import {
 import { Image } from "../../Image";
 import { Paragraph } from "../../Paragraph";
 import { Section } from "./Styles";
+
+// interface HeroProps {
+//   dispatch: Dispatch<Action>;
+// }
 
 export const Hero = () => {
   return (
@@ -32,7 +35,8 @@ export const Hero = () => {
           }
         />
         <Heading content={"Get to know yourself."} />
-        <Button content="Start" />
+        {/* <Button content="Start" onClick={() => dispatch({ type: "start" })} /> */}
+        {/* <p>{numQuestions}</p> */}
       </HeadingWrapper>
     </Section>
   );
