@@ -54,17 +54,17 @@ export const TestContainer = () => {
     initialState
   );
 
-  // const numQuestions = questions.length;
+  const numQuestions = questions.length;
   console.log(questions);
 
   useEffect(() => {
     fetch("http://localhost:3000/questions")
       .then((res) => res.json())
-      .then((data) =>
-        dispatch({ type: "dataReceived", payload: data.questions })
-      )
+      .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch(() => dispatch({ type: "dataFailed" }));
   }, []);
+
+  console.log(questions);
 
   return (
     <section>
@@ -72,7 +72,9 @@ export const TestContainer = () => {
 
       {status === "loading" && <Loader />}
       {status === "error" && <ErrorComp />}
-      {status === "ready" && <Hero />}
+      {status === "ready" && (
+        <Hero numQuestions={numQuestions} dispatch={dispatch} />
+      )}
       {status === "active" && <Questions question={questions[index]} />}
     </section>
   );
