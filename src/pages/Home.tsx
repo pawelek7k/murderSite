@@ -40,14 +40,12 @@ export const Home = () => {
   };
 
   return (
-    <>
-      <Main>
-        <Hero />
-        <Quotes />
-        <Introduction />
-        <Newsletter />
-        <ModalWarning show={showModal} onClose={handleCloseModal} />
-      </Main>
-    </>
+    <Main>
+      <Hero />
+      <Quotes />
+      <Introduction />
+      <Newsletter />
+      <ModalWarning show={showModal} onClose={handleCloseModal} />
+    </Main>
   );
 };
