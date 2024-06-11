@@ -17,7 +17,7 @@ type State = {
   questions: Question[];
   status: "loading" | "ready" | "error" | "active";
   index: number;
-  // answer: number;
+  answer: number | null;
   // points: number;
   // highscore: number;
 };
@@ -25,13 +25,14 @@ type State = {
 export type Action =
   | { type: "dataReceived"; payload: Question[] }
   | { type: "dataFailed" }
-  | { type: "start" };
+  | { type: "start" }
+  | { type: "newAnswer"; payload: number };
 
 const initialState: State = {
   questions: [],
   status: "loading",
   index: 0,
-  // answer: 0,
+  answer: null,
   // points: 0,
   // highscore: 0,
 };
@@ -44,13 +45,15 @@ function reducer(state: State, action: Action): State {
       return { ...state, status: "error" };
     case "start":
       return { ...state, status: "active" };
+    case "newAnswer":
+      return { ...state, answer: action.payload };
     default:
       throw new Error("Action unknown");
   }
 }
 
 export const TestContainer = () => {
-  const [{ questions, status, index }, dispatch] = useReducer(
+  const [{ questions, status, index, answer }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -74,7 +77,11 @@ export const TestContainer = () => {
       {status === "active" && (
         <>
           <Length numQuestions={numQuestions} />
-          <Questions question={questions[index]} />
+          <Questions
+            question={questions[index]}
+            dispatch={dispatch}
+            answer={answer}
+          />
         </>
       )}
     </section>

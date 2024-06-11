@@ -1,14 +1,27 @@
+import { Dispatch } from "react";
+import { Action } from "..";
+
 interface OptionsProps {
   options: string[];
+  dispatch: Dispatch<Action>;
+  answer: number | null;
 }
 
-export const Options = ({ options }: OptionsProps) => {
-  console.log(options);
+export const Options = ({ options, dispatch, answer }: OptionsProps) => {
+  const hasAnswered = answer !== null;
+
   return (
     <ul>
-      {options.map((o) => (
-        <li key={o}>
-          <button>{o}</button>
+      {options.map((option, index) => (
+        <li key={option}>
+          <button
+            onClick={() => dispatch({ type: "newAnswer", payload: index })}
+            className={
+              hasAnswered ? (index === answer ? "activeOption" : "") : ""
+            }
+          >
+            {option}
+          </button>
         </li>
       ))}
     </ul>
