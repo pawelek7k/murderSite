@@ -1,6 +1,8 @@
 import { useEffect, useReducer } from "react";
+import { ErrorComp } from "../../Error";
 import { Heading } from "../../Heading/h2";
-import { Hero } from "../HeroSection";
+import { Loader } from "../../Loader";
+import { QuestionsContainer } from "./Questions";
 import { Length } from "./Questions/Length";
 import { Questions } from "./Questions/Questions";
 
@@ -54,7 +56,6 @@ export const TestContainer = () => {
   );
 
   const numQuestions = questions.length;
-  console.log(questions);
 
   useEffect(() => {
     fetch("http://localhost:3000/questions")
@@ -63,19 +64,19 @@ export const TestContainer = () => {
       .catch(() => dispatch({ type: "dataFailed" }));
   }, []);
 
-  console.log(questions);
-
   return (
     <section>
       <Heading content={"Are you ready?"} visually={true} />
 
-      {["loading", "error", "ready"].includes(status) && <Hero />}
-
-      {status === "ready" && (
-        <Length numQuestions={numQuestions} dispatch={dispatch} />
+      {status === "loading" && <Loader />}
+      {status === "error" && <ErrorComp />}
+      {status === "ready" && <QuestionsContainer dispatch={dispatch} />}
+      {status === "active" && (
+        <>
+          <Length numQuestions={numQuestions} />
+          <Questions question={questions[index]} />
+        </>
       )}
-
-      {status === "active" && <Questions question={questions[index]} />}
     </section>
   );
 };

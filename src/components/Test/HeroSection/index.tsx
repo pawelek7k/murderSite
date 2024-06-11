@@ -33,7 +33,6 @@ export const Hero = () => {
         />
         <Heading content={"Get to know yourself."} />
         <Button content="Start" />
-        {/* <h2>{numQuestions}</h2> */}
       </HeadingWrapper>
     </Section>
   );
