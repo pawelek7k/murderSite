@@ -1,8 +1,24 @@
+interface Question {
+  question: string;
+  options: string[];
+}
+
 interface QuestionsProps {
-  question: any;
+  question: Question;
 }
 
 export const Questions = ({ question }: QuestionsProps) => {
-  console.log(question.question);
-  return <h1>{question.question}</h1>;
+  console.log(question);
+  return (
+    <div>
+      <h4>{question.question}</h4>
+      <ul>
+        {question.options.map((o, index: number) => (
+          <li key={index}>
+            <button>{o}</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
