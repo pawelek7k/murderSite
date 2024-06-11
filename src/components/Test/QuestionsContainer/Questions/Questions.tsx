@@ -1,3 +1,5 @@
+import { Options } from "./Options";
+
 interface Question {
   question: string;
   options: string[];
@@ -12,13 +14,7 @@ export const Questions = ({ question }: QuestionsProps) => {
   return (
     <div>
       <h4>{question.question}</h4>
-      <ul>
-        {question.options.map((o, index: number) => (
-          <li key={index}>
-            <button>{o}</button>
-          </li>
-        ))}
-      </ul>
+      <Options options={question.options} />
     </div>
   );
 };
