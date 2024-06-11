@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Dispatch } from "react";
 import AngelLeft from "../../../images/angelLeft.png";
 import AngelRight from "../../../images/angelRight.png";
 import { Button } from "../../Button";
@@ -33,7 +32,7 @@ export const Hero = () => {
           }
         />
         <Heading content={"Get to know yourself."} />
-        <Button content="Start" onClick={() => dispatch({ type: "start" })} />
+        <Button content="Start" />
         {/* <h2>{numQuestions}</h2> */}
       </HeadingWrapper>
     </Section>
