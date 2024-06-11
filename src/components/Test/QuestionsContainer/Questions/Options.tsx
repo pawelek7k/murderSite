@@ -17,7 +17,11 @@ export const Options = ({ options, dispatch, answer }: OptionsProps) => {
           <button
             onClick={() => dispatch({ type: "newAnswer", payload: index })}
             className={
-              hasAnswered ? (index === answer ? "activeOption" : "") : ""
+              hasAnswered
+                ? index === answer
+                  ? "activeOption"
+                  : "otherOptions"
+                : ""
             }
           >
             {option}

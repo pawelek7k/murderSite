@@ -4,6 +4,7 @@ import { Heading } from "../../Heading/h2";
 import { Loader } from "../../Loader";
 import { QuestionsContainer } from "./Questions";
 import { Length } from "./Questions/Length";
+import { NextBtn } from "./Questions/NextBtn";
 import { Questions } from "./Questions/Questions";
 
 type Question = {
@@ -18,7 +19,7 @@ type State = {
   status: "loading" | "ready" | "error" | "active";
   index: number;
   answer: number | null;
-  // points: number;
+  points: number;
   // highscore: number;
 };
 
@@ -26,14 +27,15 @@ export type Action =
   | { type: "dataReceived"; payload: Question[] }
   | { type: "dataFailed" }
   | { type: "start" }
-  | { type: "newAnswer"; payload: number };
+  | { type: "newAnswer"; payload: number }
+  | { type: "nextQuestion" };
 
 const initialState: State = {
   questions: [],
   status: "loading",
   index: 0,
   answer: null,
-  // points: 0,
+  points: 0,
   // highscore: 0,
 };
 
@@ -46,7 +48,17 @@ function reducer(state: State, action: Action): State {
     case "start":
       return { ...state, status: "active" };
     case "newAnswer":
-      return { ...state, answer: action.payload };
+      const question = state.questions.at(state.index);
+      return {
+        ...state,
+        answer: action.payload,
+        points:
+          action.payload === question.correctOption
+            ? state.points + question.points
+            : state.points,
+      };
+    case "nextQuestion":
+      return { ...state, index: state.index + 1, answer: null };
     default:
       throw new Error("Action unknown");
   }
@@ -70,7 +82,6 @@ export const TestContainer = () => {
   return (
     <section>
       <Heading content={"Are you ready?"} visually={true} />
-
       {status === "loading" && <Loader />}
       {status === "error" && <ErrorComp />}
       {status === "ready" && <QuestionsContainer dispatch={dispatch} />}
@@ -82,6 +93,7 @@ export const TestContainer = () => {
             dispatch={dispatch}
             answer={answer}
           />
+          <NextBtn dispatch={dispatch} answer={answer} />
         </>
       )}
     </section>
