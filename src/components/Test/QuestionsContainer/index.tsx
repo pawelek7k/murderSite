@@ -1,8 +1,7 @@
 import { useEffect, useReducer } from "react";
-import { ErrorComp } from "../../Error";
 import { Heading } from "../../Heading/h2";
-import { Loader } from "../../Loader";
 import { Hero } from "../HeroSection";
+import { Length } from "./Questions/Length";
 import { Questions } from "./Questions/Questions";
 
 type Question = {
@@ -70,11 +69,12 @@ export const TestContainer = () => {
     <section>
       <Heading content={"Are you ready?"} visually={true} />
 
-      {status === "loading" && <Loader />}
-      {status === "error" && <ErrorComp />}
+      {["loading", "error", "ready"].includes(status) && <Hero />}
+
       {status === "ready" && (
-        <Hero numQuestions={numQuestions} dispatch={dispatch} />
+        <Length numQuestions={numQuestions} dispatch={dispatch} />
       )}
+
       {status === "active" && <Questions question={questions[index]} />}
     </section>
   );

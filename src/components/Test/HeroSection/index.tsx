@@ -10,15 +10,9 @@ import {
 } from "../../Home/HeroSection/Styles";
 import { Image } from "../../Image";
 import { Paragraph } from "../../Paragraph";
-import { Action } from "../QuestionsContainer";
 import { Section } from "./Styles";
 
-interface HeroProps {
-  dispatch: Dispatch<Action>;
-  numQuestions: number;
-}
-
-export const Hero = ({ numQuestions, dispatch }: HeroProps) => {
+export const Hero = () => {
   return (
     <Section>
       <motion.div
@@ -40,7 +34,7 @@ export const Hero = ({ numQuestions, dispatch }: HeroProps) => {
         />
         <Heading content={"Get to know yourself."} />
         <Button content="Start" onClick={() => dispatch({ type: "start" })} />
-        <h2>{numQuestions}</h2>
+        {/* <h2>{numQuestions}</h2> */}
       </HeadingWrapper>
     </Section>
   );
