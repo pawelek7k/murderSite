@@ -6,9 +6,13 @@ export const StyledSlider = styled.div`
   padding: 50px 100px;
 }
 
+
 .swiper-slide {
   background-position: center;
   background-size: cover;
+  @media (max-width: 1000px) {
+  width: 300px !important;
+}
 }
 
 h3 {
