@@ -6,6 +6,7 @@ import { QuestionsContainer } from "./Questions";
 import { Length } from "./Questions/Length";
 import { NextBtn } from "./Questions/NextBtn";
 import { Questions } from "./Questions/Questions";
+import { QuestionsContStyles } from "./Styles";
 
 type Question = {
   question: string;
@@ -81,7 +82,7 @@ export const TestContainer = () => {
   }, []);
 
   return (
-    <section id="testContainer">
+    <QuestionsContStyles id="testContainer">
       <Heading content={"Are you ready?"} visually={true} />
       {status === "loading" && <Loader />}
       {status === "error" && <ErrorComp />}
@@ -97,6 +98,6 @@ export const TestContainer = () => {
           <NextBtn dispatch={dispatch} answer={answer} />
         </>
       )}
-    </section>
+    </QuestionsContStyles>
   );
 };
