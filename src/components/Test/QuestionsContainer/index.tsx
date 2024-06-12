@@ -48,7 +48,8 @@ function reducer(state: State, action: Action): State {
     case "start":
       return { ...state, status: "active" };
     case "newAnswer":
-      const question = state.questions.at(state.index);
+      // eslint-disable-next-line no-case-declarations
+      const question = state.questions[state.index];
       return {
         ...state,
         answer: action.payload,
