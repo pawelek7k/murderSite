@@ -81,7 +81,7 @@ export const TestContainer = () => {
   }, []);
 
   return (
-    <section>
+    <section id="testContainer">
       <Heading content={"Are you ready?"} visually={true} />
       {status === "loading" && <Loader />}
       {status === "error" && <ErrorComp />}

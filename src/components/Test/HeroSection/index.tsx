@@ -11,7 +11,11 @@ import { Image } from "../../Image";
 import { Paragraph } from "../../Paragraph";
 import { Section } from "./Styles";
 
-export const Hero = () => {
+interface HeroProps {
+  onStartClick: () => void;
+}
+
+export const Hero = ({ onStartClick }: HeroProps) => {
   return (
     <Section>
       <motion.div
@@ -32,7 +36,7 @@ export const Hero = () => {
           }
         />
         <Heading content={"Get to know yourself."} />
-        <Button content="Start" />
+        <Button content="Start" onClick={onStartClick} />
       </HeadingWrapper>
     </Section>
   );
