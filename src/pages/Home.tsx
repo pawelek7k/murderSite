@@ -39,6 +39,10 @@ export const Home = () => {
     setShowModal(false);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Main>
       <Hero />

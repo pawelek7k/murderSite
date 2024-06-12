@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Main } from "../components/Main";
 import { Hero } from "../components/Test/HeroSection";
 import { TestContainer } from "../components/Test/QuestionsContainer";
@@ -15,6 +15,11 @@ export const Test = () => {
       }
     }, 0);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Main>
       <Hero onStartClick={handleStartClick} />
