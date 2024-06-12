@@ -36,7 +36,7 @@ export const Hero = ({ onStartClick }: HeroProps) => {
           }
         />
         <Heading content={"Get to know yourself."} />
-        <Button content="Start" onClick={onStartClick} />
+        <Button content="Start" onClick={onStartClick} bg={true} />
       </HeadingWrapper>
     </Section>
   );

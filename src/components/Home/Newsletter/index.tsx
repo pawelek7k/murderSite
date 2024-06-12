@@ -12,7 +12,7 @@ export const Newsletter = () => {
           " Lorem ipsum dolor sit amet, consectetur adipisicing elit.  temporibus consequatur laudantium, minus veritatis aliquam vero suscipit molestiae obcaecati tempore. Incidunt, numquam libero!"
         }
       />
-      <Button content={"Subscribe"} />
+      <Button content={"Subscribe"} bg={true} />
     </Section>
   );
 };

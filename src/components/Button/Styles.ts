@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<{ $bg?: boolean }>`
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
   font-family: var(--secondary-font);
@@ -25,7 +25,7 @@ export const StyledButton = styled.button`
     transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  background: #2D0108;
+  background: ${props => (props.$bg ? '#2d0108' : '#070507d3')};
   border-radius: 10px;
   }
 

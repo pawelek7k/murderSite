@@ -24,7 +24,7 @@ export const Options = ({ options, dispatch, answer }: OptionsProps) => {
                 : ""
             }
           >
-            {option}
+            <p>{option}</p>
           </button>
         </li>
       ))}

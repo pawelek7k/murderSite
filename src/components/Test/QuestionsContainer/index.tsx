@@ -2,7 +2,7 @@ import { useEffect, useReducer } from "react";
 import { ErrorComp } from "../../Error";
 import { Heading } from "../../Heading/h2";
 import { Loader } from "../../Loader";
-import { QuestionsContainer } from "./Questions";
+import { Buttons } from "./Questions/Buttons";
 import { Length } from "./Questions/Length";
 import { NextBtn } from "./Questions/NextBtn";
 import { Questions } from "./Questions/Questions";
@@ -86,7 +86,7 @@ export const TestContainer = () => {
       <Heading content={"Are you ready?"} visually={true} />
       {status === "loading" && <Loader />}
       {status === "error" && <ErrorComp />}
-      {status === "ready" && <QuestionsContainer dispatch={dispatch} />}
+      {status === "ready" && <Buttons dispatch={dispatch} />}
       {status === "active" && (
         <>
           <Length numQuestions={numQuestions} />

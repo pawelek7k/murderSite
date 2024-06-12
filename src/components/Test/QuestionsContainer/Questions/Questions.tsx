@@ -1,5 +1,6 @@
 import { Dispatch } from "react";
 import { Action } from "..";
+import { Heading } from "../Styles";
 import { Options } from "./Options";
 
 interface Question {
@@ -16,7 +17,7 @@ interface QuestionsProps {
 export const Questions = ({ question, dispatch, answer }: QuestionsProps) => {
   return (
     <div>
-      <h4>{question.question}</h4>
+      <Heading>{question.question}</Heading>
       <Options options={question.options} dispatch={dispatch} answer={answer} />
     </div>
   );
