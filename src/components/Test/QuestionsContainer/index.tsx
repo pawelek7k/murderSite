@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from "react";
 import { ErrorComp } from "../../Error";
 import { Heading } from "../../Heading/h2";
-import { Loader } from "../../Loader/Loader";
+import { Loader } from "../../Loader";
 import { Buttons } from "./Questions/Buttons";
 import { Length } from "./Questions/Length";
 import { NextBtn } from "./Questions/NextBtn";
