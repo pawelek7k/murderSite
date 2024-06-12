@@ -25,6 +25,9 @@ flex-direction: column;
 align-items: flex-end;
 height: 60%;
 justify-content: flex-end;
+@media (max-width: 600px) {
+margin-top: 2rem;
+}
 `
 
 export const Section = styled.section`

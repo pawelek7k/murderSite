@@ -4,7 +4,7 @@ import Woman from "../../../images/sunset.jpg";
 export const StyledIntroduction = styled.section`
 padding: 15rem 3rem;
  @media (max-width: 900px) {
-    padding: 12rem .5rem;
+    padding: 10rem .5rem 5rem .5rem;
   }
 background: radial-gradient(circle at center, rgba(0, 0, 0, 73%) 15%, var(--background) 25%),
     url(${Woman});

@@ -9,7 +9,7 @@ export const Footer = () => {
       <Logo positionOnPage={false} />
       <Link
         href={"https://github.com/pawelek7k/murderSite"}
-        content={"https://github.com/pawelek7k/murderSite"}
+        content={"Github"}
       />
       <Paragraph
         content={
