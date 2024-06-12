@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navigation } from "../components/Navigation";
-import { Iceberg } from "../pages/Api";
+import { Iceberg } from "../pages/Iceberg";
 import { Home } from "../pages/Home";
 import { Test } from "../pages/Test";
 
