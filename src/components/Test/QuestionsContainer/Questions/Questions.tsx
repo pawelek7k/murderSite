@@ -18,6 +18,7 @@ export const Questions = ({ question, dispatch, answer }: QuestionsProps) => {
   return (
     <div>
       <Heading>{question.question}</Heading>
+
       <Options options={question.options} dispatch={dispatch} answer={answer} />
     </div>
   );
