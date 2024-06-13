@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { IoClose } from "react-icons/io5";
+import { Button } from "../../Button";
 import { Heading } from "../../Heading/h1";
 import { Paragraph } from "../../Paragraph";
 import {
@@ -55,6 +56,7 @@ export const ModalWarning: React.FC<ModalProps> = ({ show, onClose }) => {
                   "This website contains content about murders that may not be suitable for all audiences. Viewer discretion is advised."
                 }
               />
+              <Button content={"I understand"} bg={false} onClick={onClose} />
             </HeadingWrapper>
           </CardContent>
         </Card>

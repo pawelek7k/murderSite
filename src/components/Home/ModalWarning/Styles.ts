@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import backgroundImage from '../../../images/modal_bg.jpg';
 
 export const ModalWrapper = styled.div<{ $show?: boolean; }>`
     display: ${(props) => (props.$show ? 'flex' : 'none')};
@@ -14,21 +15,15 @@ export const ModalWrapper = styled.div<{ $show?: boolean; }>`
 `;
 
 export const ModalContent = styled.div`
-    background-color: var(--text);
-    padding: 2rem 3rem;
+    padding: 2rem;
     border-radius: var(--spacing);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    color: var(--background);
     position: relative;
+    background: linear-gradient(to bottom, var(--background) 0%, var(--background) 50%, rgba(0, 0, 0, 0.64) 100%), url(${backgroundImage});
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
-    text-align: center;
     width: 500px;
-    background-color: var(--black);
-  border-radius: inherit;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-
 `;
 
 export const CloseButton = styled.button`
@@ -47,21 +42,9 @@ export const HeadingWrapper = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 1rem;
     z-index: 888;
     color: var(--text);
-`
-
-export const Line = styled.div`
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(76,75,2,1) 39%, rgba(74,73,13,1) 50%, rgba(69,67,1,1) 65%, rgba(0,0,0,1) 100%);
-    width: 12rem;
-    text-align: center;
-    font-family: var(--secondary-font);
-    height: 1.5rem;
-    rotate: 40deg;
-    position: absolute;
-    top: 30px;
-    right: -40px;
 `
 
 export const Card = styled.div`
@@ -72,6 +55,9 @@ export const Card = styled.div`
   flex-direction: column;
   position: relative;
   padding: 3rem 1rem;
+   background: linear-gradient(to bottom, var(--background) 0%, var(--background) 20%, rgba(0, 0, 0, 0.64) 100%), url(${backgroundImage});
+  background-size: cover;
+  background-position: center;
 
   &:hover::before {
     opacity: 1;
@@ -93,7 +79,7 @@ export const Card = styled.div`
   &::before {
     background: radial-gradient(
       500px circle at var(--mouse-x) var(--mouse-y),
-      var(--primary-red),
+      var(--shadow-modal),
       transparent 40%
     );
     z-index: 1;
@@ -102,7 +88,7 @@ export const Card = styled.div`
   &::after {
     background: radial-gradient(
       600px circle at var(--mouse-x) var(--mouse-y),
-      var(--primary-red),
+      var(--shadow-modal),
       transparent 40%
     );
     z-index: 1;
