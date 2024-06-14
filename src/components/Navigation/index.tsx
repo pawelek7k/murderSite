@@ -1,11 +1,9 @@
-import { GiDaggerRose } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import { ListNavigation, StyledNavigation } from "./Styles";
 
 export const Navigation = () => {
   return (
     <StyledNavigation>
-      <GiDaggerRose />
       <nav>
         <ListNavigation>
           <li>
@@ -19,7 +17,6 @@ export const Navigation = () => {
           </li>
         </ListNavigation>
       </nav>
-      <GiDaggerRose />
     </StyledNavigation>
   );
 };
