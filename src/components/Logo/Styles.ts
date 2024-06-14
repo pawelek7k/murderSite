@@ -7,6 +7,9 @@ font-weight: 500;
 font-size: ${props => (props.$positionOnPage ? '2rem' : '3rem')};
 letter-spacing: 2px;
 text-align:  ${props => (props.$positionOnPage ? 'center' : 'start')};
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 span {
     color: var(--secondary);
     border-bottom: thin solid var(--secondary);
@@ -17,6 +20,9 @@ span {
 
 `
 export const StyledCaption = styled.h2`
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
     font-family: var(--third-font);
     font-size: 1.2rem;
     color: var(--secondary-text);
