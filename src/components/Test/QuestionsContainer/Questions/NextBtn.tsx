@@ -1,5 +1,6 @@
 import { Dispatch } from "react";
 import { Action } from "..";
+import { Button } from "../../../Button";
 
 interface BtnProps {
   dispatch: Dispatch<Action>;
@@ -9,6 +10,10 @@ interface BtnProps {
 export const NextBtn = ({ dispatch, answer }: BtnProps) => {
   if (answer === null) return null;
   return (
-    <button onClick={() => dispatch({ type: "nextQuestion" })}>Next</button>
+    <Button
+      onClick={() => dispatch({ type: "nextQuestion" })}
+      content={"Next"}
+      bg={false}
+    />
   );
 };
