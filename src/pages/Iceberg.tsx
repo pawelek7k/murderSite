@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Hero } from "../components/Iceberg/HeroSection";
 
 export const Iceberg = () => {
   useEffect(() => {
@@ -7,7 +8,7 @@ export const Iceberg = () => {
 
   return (
     <>
-      <h1>Iceberg</h1>
+      <Hero />
     </>
   );
 };
