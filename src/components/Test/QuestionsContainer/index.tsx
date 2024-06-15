@@ -83,18 +83,21 @@ export const TestContainer = () => {
 
   return (
     <QuestionsContStyles id="testContainer">
-      <Heading content={"Are you ready?"} visually={true} />
+      {status === "active" ? (
+        <Questions
+          question={questions[index]}
+          dispatch={dispatch}
+          answer={answer}
+        />
+      ) : (
+        <Heading content={"Are you ready?"} visually={true} />
+      )}
       {status === "loading" && <Loader />}
       {status === "error" && <ErrorComp />}
       {status === "ready" && <Buttons dispatch={dispatch} />}
       {status === "active" && (
         <>
           <Length numQuestions={numQuestions} />
-          <Questions
-            question={questions[index]}
-            dispatch={dispatch}
-            answer={answer}
-          />
           <NextBtn dispatch={dispatch} answer={answer} />
         </>
       )}

@@ -18,8 +18,6 @@ export const Buttons = ({ dispatch }: ButtonsProps) => {
           onClick={() => dispatch({ type: "start" })}
           bg={true}
         />
-
-        <Button content="No" bg={false} />
       </BtnsContainer>
     </>
   );
