@@ -9,7 +9,7 @@ export const Form = () => {
     <StyledForm>
       <InputField>
         <Input
-          type="text"
+          type="email"
           id="input"
           required
           onFocus={() => setIsFocused(true)}
