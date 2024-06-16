@@ -3,7 +3,6 @@ import { ErrorComp } from "../../Error";
 import { Heading } from "../../Heading/h2";
 import { Loader } from "../../Loader";
 import { Buttons } from "./Questions/Buttons";
-import { Length } from "./Questions/Length";
 import { NextBtn } from "./Questions/NextBtn";
 import { Questions } from "./Questions/Questions";
 import { QuestionsContStyles } from "./Styles";
@@ -84,23 +83,21 @@ export const TestContainer = () => {
   return (
     <QuestionsContStyles id="testContainer">
       {status === "active" ? (
-        <Questions
-          question={questions[index]}
-          dispatch={dispatch}
-          answer={answer}
-        />
+        <>
+          <Questions
+            question={questions[index]}
+            dispatch={dispatch}
+            answer={answer}
+            numQuestions={numQuestions}
+          />
+        </>
       ) : (
         <Heading content={"Are you ready?"} visually={true} />
       )}
       {status === "loading" && <Loader />}
       {status === "error" && <ErrorComp />}
       {status === "ready" && <Buttons dispatch={dispatch} />}
-      {status === "active" && (
-        <>
-          <Length numQuestions={numQuestions} />
-          <NextBtn dispatch={dispatch} answer={answer} />
-        </>
-      )}
+      {status === "active" && <NextBtn dispatch={dispatch} answer={answer} />}
     </QuestionsContStyles>
   );
 };
