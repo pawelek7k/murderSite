@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 interface LabelProps {
-  isFocused: boolean;
-  hasValue: boolean;
+  $isFocused: boolean;
+  $hasValue: boolean;
 }
 
 export const StyledForm = styled.form`
@@ -42,15 +42,15 @@ export const Input = styled.input`
 
 export const Label = styled.label<LabelProps>`
   position: absolute;
-  top: ${props => (props.isFocused || props.hasValue ? '5px' : '25px')};
-  left: ${props => (props.isFocused || props.hasValue ? '5px' : '15px')};
-  color: ${props => (props.isFocused || props.hasValue ? '#2d79f3' : '#ccc')};
-  font-size: ${props => (props.isFocused || props.hasValue ? '12px' : '16px')};
-  background-color: ${props => (props.isFocused || props.hasValue ? '#ffffff' : 'transparent')};
-  padding-left: ${props => (props.isFocused || props.hasValue ? '5px' : '0')};
-  padding-right: ${props => (props.isFocused || props.hasValue ? '5px' : '0')};
-  transition: all 0.3s ease;
-  pointer-events: none;
-  z-index: 2;
+  top: ${props => (props.$isFocused || props.$hasValue ? '10px' : '25px')};
+  left: ${props => (props.$isFocused || props.$hasValue ? '10px' : '15px')};
+  color: ${props => (props.$isFocused || props.$hasValue ? '#2d79f3' : '#ccc')};
+  font-size: ${props => (props.$isFocused || props.$hasValue ? '12px' : '16px')};
+  background-color: ${props => (props.$isFocused || props.$hasValue ? 'var(--background)' : 'transparent')};
+padding - left: ${props => (props.$isFocused || props.$hasValue ? '10px' : '0')};
+padding - right: ${props => (props.$isFocused || props.$hasValue ? '10px' : '0')};
+transition: all 0.3s ease;
+pointer - events: none;
+z - index: 2;
 `;
 

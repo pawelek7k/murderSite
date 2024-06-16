@@ -18,7 +18,7 @@ export const Form = () => {
             setHasValue(e.target.value !== "");
           }}
         />
-        <Label htmlFor="input" isFocused={isFocused} hasValue={hasValue}>
+        <Label htmlFor="input" $isFocused={isFocused} $hasValue={hasValue}>
           Enter your email
         </Label>
       </InputField>
