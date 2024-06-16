@@ -90,6 +90,7 @@ export const TestContainer = () => {
             answer={answer}
             numQuestions={numQuestions}
           />
+          <NextBtn dispatch={dispatch} answer={answer} />
         </>
       ) : (
         <Heading content={"Are you ready?"} visually={true} />
@@ -97,7 +98,6 @@ export const TestContainer = () => {
       {status === "loading" && <Loader />}
       {status === "error" && <ErrorComp />}
       {status === "ready" && <Buttons dispatch={dispatch} />}
-      {status === "active" && <NextBtn dispatch={dispatch} answer={answer} />}
     </QuestionsContStyles>
   );
 };
