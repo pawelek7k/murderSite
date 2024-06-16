@@ -6,3 +6,9 @@ export const StyledFooter = styled.footer`
     line-height: 2.5rem;
 
 `
+export const ContactUs = styled.div`
+    width: 100%;
+    height: 8rem;
+    background-color: pink;
+    border-radius: var(--secondary-border-radius);
+`

@@ -16,7 +16,7 @@ export const ModalWrapper = styled.div<{ $show?: boolean; }>`
 
 export const ModalContent = styled.div`
     padding: 2rem;
-    border-radius: var(--spacing);
+    border-radius: var(--secondary-border-radius);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     background: linear-gradient(to bottom, var(--background) 0%, var(--background) 50%, rgba(0, 0, 0, 0.64) 100%), url(${backgroundImage});
@@ -52,7 +52,7 @@ export const HeadingWrapper = styled.div`
 
 export const Card = styled.div`
   background-color: var(--background);
-  border-radius: 10px;
+  border-radius: var(--secondary-border-radius);
   cursor: pointer;
   display: flex;
   flex-direction: column;

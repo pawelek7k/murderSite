@@ -18,5 +18,6 @@
   --border: thin solid var(--secondary);
   --spacing: 2rem;
   --border-radius: 2rem;
+  --secondary-border-radius: 2rem 0rem 2rem 0rem;
   --primary-yellow: rgba(69, 67, 1, 1);
 }
