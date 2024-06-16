@@ -1,6 +1,6 @@
 interface paramsCookie {
     name: string,
-    value: string,
+    value: boolean,
     days: number
 }
 

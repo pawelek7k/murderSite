@@ -5,16 +5,20 @@ import { ModalWarning } from "../components/Home/ModalWarning";
 import { Newsletter } from "../components/Home/Newsletter";
 import { Quotes } from "../components/Home/QuotesSection";
 import { Main } from "../components/Main";
+import { getCookie, setCookie } from "../cookies/cookies";
 
 export const Home = () => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowModal(true);
-    }, 2000);
+    const modalShown = getCookie("modalShown");
+    if (!modalShown) {
+      const timer = setTimeout(() => {
+        setShowModal(true);
+      }, 2000);
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   useEffect(() => {
@@ -37,6 +41,7 @@ export const Home = () => {
 
   const handleCloseModal = () => {
     setShowModal(false);
+    setCookie({ name: "modalShown", value: true, days: 30 });
   };
 
   useEffect(() => {
