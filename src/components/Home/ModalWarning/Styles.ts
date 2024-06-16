@@ -24,6 +24,9 @@ export const ModalContent = styled.div`
     background-position: center;
     overflow: hidden;
     width: 500px;
+    @media (max-width: 600px) {
+    width: 100%;
+    }
 `;
 
 export const CloseButton = styled.button`
