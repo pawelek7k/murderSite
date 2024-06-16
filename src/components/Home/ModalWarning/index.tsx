@@ -20,16 +20,18 @@ interface ModalProps {
 export const ModalWarning: React.FC<ModalProps> = ({ show, onClose }) => {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const cards = document.getElementById("cards");
+      const cards = document.getElementsByClassName("cards");
       if (cards) {
-        const cardElements = cards.getElementsByClassName("card");
-        for (const card of Array.from(cardElements)) {
-          const rect = (card as HTMLElement).getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
+        for (const cardContainer of Array.from(cards)) {
+          const cardElements = cardContainer.getElementsByClassName("card");
+          for (const card of Array.from(cardElements)) {
+            const rect = (card as HTMLElement).getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-          (card as HTMLElement).style.setProperty("--mouse-x", `${x}px`);
-          (card as HTMLElement).style.setProperty("--mouse-y", `${y}px`);
+            (card as HTMLElement).style.setProperty("--mouse-x", `${x}px`);
+            (card as HTMLElement).style.setProperty("--mouse-y", `${y}px`);
+          }
         }
       }
     };
@@ -43,7 +45,7 @@ export const ModalWarning: React.FC<ModalProps> = ({ show, onClose }) => {
 
   return (
     <ModalWrapper $show={show}>
-      <ModalContent id="cards">
+      <ModalContent className="cards">
         <Card className="card">
           <CardContent>
             <CloseButton onClick={onClose}>

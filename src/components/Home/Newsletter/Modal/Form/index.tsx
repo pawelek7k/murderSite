@@ -22,7 +22,7 @@ export const Form = () => {
           Enter your email
         </Label>
       </InputField>
-      <Button content={"Subscribe!"} bg={true} />
+      <Button content={"Subscribe!"} bg={false} />
     </StyledForm>
   );
 };

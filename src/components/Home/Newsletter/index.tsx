@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Button } from "../../Button";
 import { Heading } from "../../Heading/h2";
 import { Paragraph } from "../../Paragraph";
-import { Modal } from "./Modal";
 import { Section } from "./Styles";
+import { Modal } from "./Modal";
 
 export const Newsletter = () => {
   const [showModal, setShowModal] = useState(false);

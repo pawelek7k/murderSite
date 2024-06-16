@@ -18,7 +18,7 @@ interface ModalProps {
 export const Modal = ({ onClose, show }: ModalProps) => {
   return (
     <ModalWrapper $show={show}>
-      <ModalContent id="cards">
+      <ModalContent className="cards">
         <Card className="card">
           <CardContent>
             <CloseButton onClick={onClose}>
