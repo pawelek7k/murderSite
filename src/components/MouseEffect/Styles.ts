@@ -5,7 +5,6 @@ export const Cards = styled.div`
 `
 
 export const Card = styled.div`
-  background-color: var(--background);
   border-radius: var(--secondary-border-radius);
   cursor: pointer;
   display: flex;

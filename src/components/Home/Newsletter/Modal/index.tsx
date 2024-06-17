@@ -2,6 +2,7 @@ import { IoClose } from "react-icons/io5";
 import { Heading } from "../../../Heading/h2";
 import { MouseEffect } from "../../../MouseEffect";
 import {
+  CardContent,
   CloseButton,
   HeadingWrapper,
   ModalContent,
@@ -19,13 +20,15 @@ export const Modal = ({ onClose, show }: ModalProps) => {
     <ModalWrapper $show={show}>
       <ModalContent>
         <MouseEffect>
-          <CloseButton onClick={onClose}>
-            <IoClose />
-          </CloseButton>
-          <HeadingWrapper>
-            <Heading content={"Subscribe for crime news!"} visually={true} />
-            <Form />
-          </HeadingWrapper>
+          <CardContent>
+            <CloseButton onClick={onClose}>
+              <IoClose />
+            </CloseButton>
+            <HeadingWrapper>
+              <Heading content={"Subscribe for crime news!"} visually={true} />
+              <Form />
+            </HeadingWrapper>
+          </CardContent>
         </MouseEffect>
       </ModalContent>
     </ModalWrapper>

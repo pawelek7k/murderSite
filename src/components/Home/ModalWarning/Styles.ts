@@ -50,3 +50,8 @@ export const HeadingWrapper = styled.div`
     color: var(--text);
 `
 
+export const CardContent = styled.div`
+  background: linear-gradient(to bottom, var(--background) 0%, var(--background) 50%, rgba(0, 0, 0, 0.64) 100%), url(${backgroundImage});
+    background-size: cover;
+    background-position: center;
+`
