@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 
 export const Label = styled.label`
   font-size: 14px;
-  color: rgb(99, 102, 102);
+  color: var(--primary);
   padding: 0rem .5rem;
   height: 0rem;
   position: absolute;
@@ -28,7 +28,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--primary);
   margin-bottom: 20px;
   outline: 0;
   width: 100%;
@@ -53,7 +53,7 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--primary);
   margin-bottom: 20px;
   outline: 0;
   width: 100%;
