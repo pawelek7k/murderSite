@@ -53,6 +53,3 @@ export const Card = styled.div`
   }
 `;
 
-export const CardContent = styled.div`
-  z-index: 999;
-`

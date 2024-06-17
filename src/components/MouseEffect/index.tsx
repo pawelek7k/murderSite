@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Card, CardContent, Cards } from "./Styles";
+import { Card, Cards } from "./Styles";
 
 interface MouseProps {
   children: React.ReactNode;
@@ -32,9 +32,7 @@ export const MouseEffect = ({ children }: MouseProps) => {
   }, []);
   return (
     <Cards className="cards">
-      <Card className="card">
-        <CardContent>{children}</CardContent>
-      </Card>
+      <Card className="card">{children}</Card>
     </Cards>
   );
 };
