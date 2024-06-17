@@ -6,7 +6,6 @@ interface LabelProps {
 }
 
 export const StyledForm = styled.form`
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   width: 400px;
   display: flex;
   justify-content: center;
@@ -14,6 +13,7 @@ export const StyledForm = styled.form`
   gap: 10px;
   padding: 25px;
   border-radius: 8px;
+  background-color: transparent;
 `;
 
 

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import backgroundImage from '../../images/modal_bg.jpg';
 
 export const Cards = styled.div`
     position: relative;
@@ -13,9 +12,6 @@ export const Card = styled.div`
   flex-direction: column;
   position: relative;
   padding: 3rem 1rem;
-   background: linear-gradient(to bottom, var(--background) 0%, var(--background) 20%, rgba(0, 0, 0, 0.64) 100%), url(${backgroundImage});
-  background-size: cover;
-  background-position: center;
 
   &:hover::before {
     opacity: 1;
