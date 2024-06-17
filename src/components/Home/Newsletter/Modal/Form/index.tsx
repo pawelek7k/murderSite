@@ -10,7 +10,7 @@ export const Form = () => {
       <InputField>
         <Input
           type="email"
-          id="input"
+          id="modalEmail"
           required
           onFocus={() => setIsFocused(true)}
           onBlur={(e) => {
@@ -18,7 +18,7 @@ export const Form = () => {
             setHasValue(e.target.value !== "");
           }}
         />
-        <Label htmlFor="input" $isFocused={isFocused} $hasValue={hasValue}>
+        <Label htmlFor="modalEmail" $isFocused={isFocused} $hasValue={hasValue}>
           Enter your email
         </Label>
       </InputField>

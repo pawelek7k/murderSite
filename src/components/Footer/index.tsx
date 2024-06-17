@@ -1,19 +1,25 @@
 import { Heading } from "../Heading/h2";
 import { MouseEffect } from "../MouseEffect";
 import { Paragraph } from "../Paragraph";
-import { ContactUs, StyledFooter } from "./Styles";
+import { Form } from "./Form";
+import { ContactUs, FormWrapper, HeadingWrapper, StyledFooter } from "./Styles";
 
 export const Footer = () => {
   return (
     <StyledFooter>
       <ContactUs>
         <MouseEffect>
-          <Heading content={"Contact us!"} visually={true} />
-          <Paragraph
-            content={
-              "a laudantium rem saepe eius, qui aspernatur deserunt maiores perferendis, laboriosam culpa reiciendis."
-            }
-          />
+          <HeadingWrapper>
+            <Heading content={"Contact us!"} visually={true} />
+          </HeadingWrapper>
+          <FormWrapper>
+            <Paragraph
+              content={
+                "a laudantium rem saepe eius, qui aspernatur deserunt maiores perferendis, laboriosam culpa reiciendis."
+              }
+            />
+            <Form />
+          </FormWrapper>
         </MouseEffect>
       </ContactUs>
       {/* <Logo positionOnPage={false} />
