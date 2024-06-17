@@ -1,17 +1,18 @@
-import { FormStyles, Group, Input, Label, Textarea } from "./Styles";
+import { Button } from "../../Button";
+import { FormStyles, Input, Label, Textarea, Wrapper } from "./Styles";
 
 export const Form = () => {
   return (
     <FormStyles>
-      <Group>
+      <Wrapper>
         <Input placeholder="‎" type="text" required />
         <Label htmlFor="name">Name</Label>
-      </Group>
-      <Group>
+      </Wrapper>
+      <Wrapper>
         <Input placeholder="‎" type="email" id="email" name="email" required />
         <Label htmlFor="email">Email</Label>
-      </Group>
-      <Group>
+      </Wrapper>
+      <Wrapper>
         <Textarea
           placeholder="‎"
           id="comment"
@@ -19,7 +20,8 @@ export const Form = () => {
           required
         ></Textarea>
         <Label htmlFor="comment">Comment</Label>
-      </Group>
+      </Wrapper>
+      <Button content={"Submit"} bg={false} />
     </FormStyles>
   );
 };
