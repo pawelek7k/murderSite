@@ -41,7 +41,7 @@ export const Input = styled.input`
     border-color: var(--accent);
   }
   &:focus + ${Label} {
-    top: -15px;
+    top: -18px;
     left: 10px;
     background-color: var(--primary-red);
     color: var(--accent);
@@ -68,7 +68,7 @@ export const Textarea = styled.textarea`
     border-color: var(--accent);
   }
   &:focus + ${Label} {
-    top: -20px;
+    top: -18px;
     left: 10px;
     background-color: var(--primary-red);
     color: var(--accent);
