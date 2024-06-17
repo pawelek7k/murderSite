@@ -14,3 +14,8 @@ export const HeadingWrapper = styled.div`
 export const FormWrapper = styled.div`
     z-index: 3;
 `
+
+export const Wrapper = styled.div`
+display: flex;
+justify-content: space-between;
+`
