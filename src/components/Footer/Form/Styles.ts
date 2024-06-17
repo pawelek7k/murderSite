@@ -61,7 +61,7 @@ export const Textarea = styled.textarea`
   resize: none;
   height: 100px;
   &:placeholder-shown + ${Label} {
-    top: 10px;
+    top: 0;
     background-color: transparent;
   }
   &:focus {
