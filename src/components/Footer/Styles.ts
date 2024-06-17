@@ -9,8 +9,6 @@ export const StyledFooter = styled.footer`
 `
 export const ContactUs = styled.div`
     width: 100%;
-    padding: 3rem;
-    height: 8rem;
     background-color: var(--primary-red);
     border-radius: var(--secondary-border-radius);
 `
