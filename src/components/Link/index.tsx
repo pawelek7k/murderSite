@@ -2,9 +2,13 @@ import { StyledLink } from "./Styles";
 
 interface LinkProps {
   href: string;
-  content: string;
+  content: string | React.ReactNode;
 }
 
 export const Link = ({ href, content }: LinkProps) => {
-  return <StyledLink href={href}>{content}</StyledLink>;
+  return (
+    <StyledLink target="_blank" href={href}>
+      {content}
+    </StyledLink>
+  );
 };
