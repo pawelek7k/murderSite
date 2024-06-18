@@ -32,6 +32,7 @@ export const Input = styled.input`
   margin-bottom: 20px;
   outline: 0;
   width: 100%;
+  color: var(--primary);
   background-color: transparent;
   &:placeholder-shown + ${Label} {
     top: 0;

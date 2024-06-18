@@ -16,13 +16,13 @@ export const ContactUs = () => {
         <Wrapper>
           <HeadingWrapper>
             <Heading content={"Contact us!"} visually={true} />
-          </HeadingWrapper>
-          <FormWrapper>
             <Paragraph
               content={
                 "a laudantium rem saepe eius, qui aspernatur deserunt maiores perferendis, laboriosam culpa reiciendis."
               }
             />
+          </HeadingWrapper>
+          <FormWrapper>
             <Form />
           </FormWrapper>
         </Wrapper>
