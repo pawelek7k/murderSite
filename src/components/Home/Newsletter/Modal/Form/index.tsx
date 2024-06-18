@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import { useState } from "react";
 import { Button } from "../../../../Button";
 import { Input, InputField, Label, StyledForm } from "./StyledForm";
@@ -5,12 +6,13 @@ import { Input, InputField, Label, StyledForm } from "./StyledForm";
 export const Form = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [hasValue, setHasValue] = useState(false);
+  const nanoId = nanoid();
   return (
     <StyledForm>
       <InputField>
         <Input
           type="email"
-          id="modalEmail"
+          id={nanoId}
           required
           onFocus={() => setIsFocused(true)}
           onBlur={(e) => {
@@ -18,7 +20,7 @@ export const Form = () => {
             setHasValue(e.target.value !== "");
           }}
         />
-        <Label htmlFor="modalEmail" $isFocused={isFocused} $hasValue={hasValue}>
+        <Label htmlFor={nanoId} $isFocused={isFocused} $hasValue={hasValue}>
           Enter your email
         </Label>
       </InputField>
