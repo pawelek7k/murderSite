@@ -17,7 +17,7 @@ export const Introduction = () => {
             res={true}
           />
 
-          <Heading content={"Come closer..."} visually={true} />
+          <Heading content={"Come closer"} visually={true} />
           <Image
             src={AngelRight}
             alt={"Angel with gun."}

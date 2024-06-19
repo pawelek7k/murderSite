@@ -53,6 +53,7 @@ export const Home = () => {
       <Hero />
       <Quotes />
       <Introduction />
+      {/* <TheoriesSection /> */}
       <Newsletter />
       <ModalWarning show={showModal} onClose={handleCloseModal} />
     </Main>
