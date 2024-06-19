@@ -8,5 +8,9 @@ export const StyledFooter = styled.footer`
     flex-direction: column;
     gap: var(--spacing);
     position: relative;
+    @media (max-width: 650px) {
+    padding: 4rem 0rem 8rem 0rem;
+
+    }
 
 `

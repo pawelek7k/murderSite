@@ -16,6 +16,10 @@ export const HeadingWrapper = styled.div`
     align-items: start;
     width: 30%;
     gap: 2rem;
+    @media (max-width: 800px) {
+    width: 100%;
+    align-items: center;
+}
 `
 
 export const FormWrapper = styled.div`
@@ -25,4 +29,10 @@ export const FormWrapper = styled.div`
 export const Wrapper = styled.div`
 display: flex;
 justify-content: space-around;
+flex-direction: row;
+@media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 `

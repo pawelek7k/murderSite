@@ -6,7 +6,7 @@ import { Test } from "../pages/Test";
 
 export const RouterIndex = () => {
   return (
-    <BrowserRouter basename="/murderSite">
+    <BrowserRouter>
       {/* basename="/murderSite" */}
       <Navigation />
       <Routes>

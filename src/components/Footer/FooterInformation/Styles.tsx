@@ -4,6 +4,11 @@ export const Wrapper = styled.div`
   padding: 2rem;
   display: flex;
   justify-content: space-around;
+  flex-direction: row;
+  @media (max-width: 650px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 `;
 
 export const IconWrapper = styled.div`
