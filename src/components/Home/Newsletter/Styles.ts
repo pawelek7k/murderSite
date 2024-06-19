@@ -11,4 +11,7 @@ export const Section = styled.section`
   gap: var(--spacing);
   align-items: center;
   text-align: center;
+  @media (max-width: 500px) {
+    padding: 5rem 1rem;
+    }
 `
