@@ -2,12 +2,6 @@ import styled from 'styled-components';
 
 
 
-export const FormStyles = styled.form`
-  margin-top: 20px;
-    width: 400px;
-  display: flex;
-  flex-direction: column;
-`;
 
 export const Wrapper = styled.div`
   position: relative;
@@ -49,9 +43,7 @@ export const Input = styled.input`
     font-weight: 600;
     font-size: 14px;
   }
-    @media (max-width: 450px) {
-    width: 100%;
-    }
+
 `;
 
 export const Textarea = styled.textarea`

@@ -15,6 +15,9 @@ export const StyledForm = styled.form`
   border-radius: 8px;
   background-color: transparent;
   z-index: 2;
+   @media (max-width: 500px) {
+    width: 100%;
+    }
 `;
 
 export const InputField = styled.div`
