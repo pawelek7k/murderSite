@@ -3,7 +3,7 @@ import { ImArrowDown2 } from "react-icons/im";
 import AngelLeft from "../../../images/angelLeft.png";
 import AngelRight from "../../../images/angelRight.png";
 import LogoIlluminati from "../../../images/conspiracy_theory_logo.png";
-import { Date } from "../../Date";
+import { TimeComponent } from "../../Date";
 import { Heading } from "../../Heading/h1";
 import { Image } from "../../Image";
 import { LookUp } from "../../LookUp";
@@ -19,7 +19,7 @@ export const Hero = () => {
   return (
     <>
       <Section>
-        <Date />
+        <TimeComponent />
         <motion.div
           className="p-6 bg-white rounded-md shadow-md"
           initial={{ opacity: 0, y: -50 }}
