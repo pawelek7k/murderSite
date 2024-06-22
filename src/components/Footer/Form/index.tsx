@@ -10,7 +10,6 @@ import {
 } from "../../Home/Newsletter/Modal/Form/StyledForm";
 
 export const Form = () => {
-  // State variables for each input field
   const [isNameFocused, setIsNameFocused] = useState(false);
   const [hasNameValue, setHasNameValue] = useState(false);
   const [isEmailFocused, setIsEmailFocused] = useState(false);
@@ -81,7 +80,7 @@ export const Form = () => {
           How can we help you?
         </Label>
       </InputField>
-      <Button content={"Submit"} bg={false} />
+      <Button content={"Submit"} bg={true} />
     </StyledForm>
   );
 };

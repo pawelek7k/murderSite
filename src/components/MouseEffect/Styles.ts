@@ -6,7 +6,6 @@ export const Cards = styled.div`
 
 export const Card = styled.div`
   border-radius: var(--secondary-border-radius);
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   position: relative;

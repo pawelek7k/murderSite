@@ -10,6 +10,7 @@ export const StyledButton = styled.button<{ $bg?: boolean }>`
   position: relative;
   color: #f0f0f0;
   z-index: 1;
+  cursor: pointer;
 
   &::after,
   &::before {
