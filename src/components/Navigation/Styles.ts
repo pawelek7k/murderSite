@@ -10,7 +10,7 @@ background-color: var(--background-blur);
 backdrop-filter: var(--blur);
 border: var(--border);
 position: fixed;
-bottom: 10px;
+bottom: 1rem;
 left: 50%;
 transform: translateX(-50%);
 border-radius: var(--border-radius);
