@@ -1,11 +1,18 @@
-import { useState } from "react";
-import { setCookie } from "../../cookies/cookies";
+import { useEffect, useState } from "react";
+import { getCookie, setCookie } from "../../cookies/cookies";
 import { CookieInformation } from "../CookiesInfo";
 import { Logo } from "../Logo";
 import { StyledHeader } from "./Styles";
 
 export const Header = () => {
   const [showInfo, setShowInfo] = useState(true);
+
+  useEffect(() => {
+    const cookieInfoShown = getCookie("modalShown");
+    if (cookieInfoShown) {
+      setShowInfo(false);
+    }
+  }, []);
 
   const handleCloseInfo = () => {
     setShowInfo(false);
