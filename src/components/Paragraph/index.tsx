@@ -6,6 +6,9 @@ interface ParagraphProps {
 
 const Styles = styled.p`
   font-family: var(--third-font);
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Paragraph = ({ content }: ParagraphProps) => {

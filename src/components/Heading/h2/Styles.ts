@@ -6,4 +6,7 @@ export const StyledHeading = styled.h2<{ $visually?: boolean }>`
   font-size: 3.5rem;
   letter-spacing: 1px;
   visibility: ${props => (props.$visually ? "visible" : "hidden")};
+  @media (max-width: 600px) {
+  font-size: 2.5rem;
+}
 `;

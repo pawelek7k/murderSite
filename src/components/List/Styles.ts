@@ -21,6 +21,9 @@ export const ListStyles = styled.ul`
     position: relative;
     padding-left: 2rem;
     font-family: var(--third-font);
+    @media (max-width: 600px) {
+    font-size: 1rem;
+    }
 
     &::after {
     content: '';

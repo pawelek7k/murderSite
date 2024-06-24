@@ -25,6 +25,9 @@ h3 {
 p {
     letter-spacing: 1px;
     font-family: var(--third-font);
+     @media (max-width: 600px) {
+    font-size: .9rem;
+    }
 }
 
 `;
