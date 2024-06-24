@@ -13,4 +13,7 @@ export const StyledHeader = styled.header<{ $show?: boolean }>`
   z-index: 999;
   border-bottom: var(--border);
   top: 0;
+  @media (max-width: 1000px) {
+  padding: ${(props) => (props.$show ? "6rem .5rem .5rem .5rem" : ".5rem")};
+  }
 `;

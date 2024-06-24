@@ -11,6 +11,11 @@ export const Container = styled.div<{ $show?: boolean }>`
   justify-content: space-between;
   align-items: center;
   padding: .5rem 2rem;
+  flex-direction: row;
+  @media (max-width: 1000px) {
+  flex-direction: column;
+  gap: .5rem;
+  }
 `;
 export const Button = styled.span`
     color: var(--text);

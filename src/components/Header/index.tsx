@@ -16,7 +16,7 @@ export const Header = () => {
 
   const handleCloseInfo = () => {
     setShowInfo(false);
-    setCookie({ name: "modalShown", value: true, days: 30 });
+    setCookie({ name: "CookieShown", value: true, days: 30 });
   };
 
   return (
