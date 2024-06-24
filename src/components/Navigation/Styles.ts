@@ -14,7 +14,7 @@ bottom: 1rem;
 left: 50%;
 transform: translateX(-50%);
 border-radius: var(--border-radius);
-padding: 1rem 4rem;
+padding: 1rem 2rem;
 z-index: 999;
 
 .active {
@@ -45,4 +45,7 @@ transition: var(--transition);
 color: var(--primary)
 }
 }
+`
+export const Container = styled.div`
+    cursor: pointer;
 `

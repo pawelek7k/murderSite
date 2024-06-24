@@ -5,7 +5,6 @@ import { ModalWarning } from "../components/Home/ModalWarning";
 import { Newsletter } from "../components/Home/Newsletter";
 import { Quotes } from "../components/Home/QuotesSection";
 import { Main } from "../components/Main";
-import { ScrollUp } from "../components/ScrollUp";
 import { getCookie, setCookie } from "../cookies/cookies";
 
 export const Home = () => {
@@ -51,7 +50,6 @@ export const Home = () => {
 
   return (
     <Main>
-      <ScrollUp />
       <Hero />
       <Quotes />
       <Introduction />
