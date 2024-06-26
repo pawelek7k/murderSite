@@ -4,3 +4,17 @@ body {
   font-family: var(--third-font);
   overflow-x: hidden;
 }
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--background);
+  border-radius: 20px;
+  border: var(--border);
+}
