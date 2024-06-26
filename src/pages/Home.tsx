@@ -4,6 +4,7 @@ import { Introduction } from "../components/Home/IntroductionSection";
 import { ModalWarning } from "../components/Home/ModalWarning";
 import { Newsletter } from "../components/Home/Newsletter";
 import { Quotes } from "../components/Home/QuotesSection";
+import { TheoriesSection } from "../components/Home/TheoriesSection";
 import { Main } from "../components/Main";
 import { getCookie, setCookie } from "../cookies/cookies";
 
@@ -53,7 +54,7 @@ export const Home = () => {
       <Hero />
       <Quotes />
       <Introduction />
-      {/* <TheoriesSection /> */}
+      <TheoriesSection />
       <Newsletter />
       <ModalWarning show={showModal} onClose={handleCloseModal} />
     </Main>
