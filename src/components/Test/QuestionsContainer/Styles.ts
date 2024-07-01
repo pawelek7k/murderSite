@@ -24,3 +24,21 @@ export const QuestionWrapper = styled.div`
   align-items: center;
   gap: 1rem;
 `
+
+export const AnswerBtn = styled.button`
+  background-color: var(--background-blur);
+  color: var(--text);
+  line-height: 1.5;
+  border: none;
+  padding: .5rem;
+  font-family: var(--third-font);
+  transition: var(--transition);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 2rem 0rem 2rem 0rem;
+
+  &:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+`

@@ -1,5 +1,6 @@
 import { Dispatch } from "react";
 import { Action } from "..";
+import { AnswerBtn } from "../Styles";
 
 interface OptionsProps {
   options: string[];
@@ -14,7 +15,7 @@ export const Options = ({ options, dispatch, answer }: OptionsProps) => {
     <ul>
       {options.map((option, index) => (
         <li key={option}>
-          <button
+          <AnswerBtn
             onClick={() => dispatch({ type: "newAnswer", payload: index })}
             className={
               hasAnswered
@@ -25,7 +26,7 @@ export const Options = ({ options, dispatch, answer }: OptionsProps) => {
             }
           >
             <p>{option}</p>
-          </button>
+          </AnswerBtn>
         </li>
       ))}
     </ul>
