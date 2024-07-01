@@ -79,6 +79,7 @@ export const TestContainer = () => {
         }
         const result = await response.json();
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const data = result.data.map((item: any) => ({
           question: item.question,
           options: Object.keys(item.answers),

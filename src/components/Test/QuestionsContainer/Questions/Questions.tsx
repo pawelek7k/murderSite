@@ -1,6 +1,7 @@
 import { Dispatch } from "react";
 import { Action } from "..";
 import { Heading } from "../../../Heading/h2";
+import { QuestionWrapper } from "../Styles";
 import { Length } from "./Length";
 import { Options } from "./Options";
 
@@ -23,10 +24,10 @@ export const Questions = ({
   numQuestions,
 }: QuestionsProps) => {
   return (
-    <div>
+    <QuestionWrapper>
       <Heading content={question.question} visually={true} />
       <Length numQuestions={numQuestions} />
       <Options options={question.options} dispatch={dispatch} answer={answer} />
-    </div>
+    </QuestionWrapper>
   );
 };

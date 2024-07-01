@@ -10,14 +10,7 @@ export const QuestionsContStyles = styled.section`
     gap: 2rem;
     background: linear-gradient(to bottom, var(--background) 0%, var(--background) 20%, rgba(0, 0, 0, 0.84) 100%), url(${backgroundImage});
   background-size: cover;
-  background-position: center;
-//     .activeOption {
-//   background-color: red;
-//   }
 
-//   .otherOptions {
-//   background-color: black;
-//   }
 
 `
 export const Heading = styled.h3`
@@ -25,3 +18,9 @@ export const Heading = styled.h3`
     font-size: 1.5rem;
 `
 
+export const QuestionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+`
