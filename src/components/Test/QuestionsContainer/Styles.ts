@@ -25,10 +25,3 @@ export const Heading = styled.h3`
     font-size: 1.5rem;
 `
 
-export const BtnsContainer = styled.div`
-    display: flex;
-    gap: 2rem;
-
-
-    }
-`

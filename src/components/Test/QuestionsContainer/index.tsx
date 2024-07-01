@@ -11,7 +11,7 @@ type Question = {
   question: string;
   options: string[];
   correctOption: number;
-  points: number;
+  points: number[];
 };
 
 type State = {
@@ -53,10 +53,7 @@ function reducer(state: State, action: Action): State {
       return {
         ...state,
         answer: action.payload,
-        points:
-          action.payload === question.correctOption
-            ? state.points + question.points
-            : state.points,
+        points: state.points + question.points[action.payload],
       };
     case "nextQuestion":
       return { ...state, index: state.index + 1, answer: null };
@@ -74,10 +71,28 @@ export const TestContainer = () => {
   const numQuestions = questions.length;
 
   useEffect(() => {
-    fetch("http://localhost:3000/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch(() => dispatch({ type: "dataFailed" }));
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3030/personality-quiz");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const result = await response.json();
+
+        const data = result.data.map((item: any) => ({
+          question: item.question,
+          options: Object.keys(item.answers),
+          correctOption: null,
+          points: Object.values(item.answers),
+        }));
+
+        dispatch({ type: "dataReceived", payload: data });
+      } catch (error) {
+        dispatch({ type: "dataFailed" });
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
