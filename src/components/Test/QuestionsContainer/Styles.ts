@@ -43,3 +43,8 @@ export const AnswerBtn = styled.button`
     color: var(--primary)
   }
 `
+
+export const CategoryText = styled.li<{ isHighRisk: boolean }>`
+color: ${(props) => (props.isHighRisk ? 'red' : "inherit")};
+font-weight:  ${(props) => (props.isHighRisk ? 600 : "inherit")};
+`;

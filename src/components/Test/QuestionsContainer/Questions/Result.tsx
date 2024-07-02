@@ -1,4 +1,5 @@
 import { Heading } from "../../../Heading/h2";
+import { CategoryText } from "../Styles";
 
 interface ResultProps {
   points: number;
@@ -7,6 +8,7 @@ interface ResultProps {
 export const Result = ({ points }: ResultProps) => {
   let category = "";
   let description = "";
+  let isHighRisk = false;
 
   switch (true) {
     case points < 50:
@@ -23,6 +25,7 @@ export const Result = ({ points }: ResultProps) => {
       category = "Person with high psychopathic tendencies";
       description =
         "Your results indicate a high level of traits associated with psychopathy. It is recommended to consult with a psychologist or psychiatrist for a more thorough evaluation.";
+      isHighRisk = true;
       break;
     default:
       category = "Error";
@@ -34,7 +37,7 @@ export const Result = ({ points }: ResultProps) => {
     <div>
       <Heading content={"Test Complete!"} visually={true} />
       <ul>
-        <li>{category}</li>
+        <CategoryText isHighRisk={isHighRisk}>{category}</CategoryText>
         <li>{description}</li>
       </ul>
     </div>
