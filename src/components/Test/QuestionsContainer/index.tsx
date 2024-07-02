@@ -5,6 +5,7 @@ import { Loader } from "../../Loader";
 import { Buttons } from "./Questions/Buttons";
 import { NextBtn } from "./Questions/NextBtn";
 import { Questions } from "./Questions/Questions";
+import { Result } from "./Questions/Result";
 import { QuestionsContStyles } from "./Styles";
 
 type Question = {
@@ -15,11 +16,11 @@ type Question = {
 
 type State = {
   questions: Question[];
-  status: "loading" | "ready" | "error" | "active";
+  status: "loading" | "ready" | "error" | "active" | "finished";
   index: number;
   answer: number | null;
   points: number;
-  // highscore: number;
+  previousAnswer: number | null;
 };
 
 export type Action =
@@ -35,7 +36,7 @@ const initialState: State = {
   index: 0,
   answer: null,
   points: 0,
-  // highscore: 0,
+  previousAnswer: null,
 };
 
 function reducer(state: State, action: Action): State {
@@ -49,13 +50,30 @@ function reducer(state: State, action: Action): State {
     case "newAnswer":
       // eslint-disable-next-line no-case-declarations
       const question = state.questions[state.index];
+      // eslint-disable-next-line no-case-declarations
+      const newPoints =
+        state.previousAnswer !== null
+          ? state.points -
+            question.points[state.previousAnswer] +
+            question.points[action.payload]
+          : state.points + question.points[action.payload];
       return {
         ...state,
         answer: action.payload,
-        points: state.points + question.points[action.payload],
+        points: newPoints,
+        previousAnswer: action.payload,
       };
     case "nextQuestion":
-      return { ...state, index: state.index + 1, answer: null };
+      // eslint-disable-next-line no-case-declarations
+      const isLastQuestion = state.index === state.questions.length - 1;
+      return isLastQuestion
+        ? { ...state, status: "finished" }
+        : {
+            ...state,
+            index: state.index + 1,
+            answer: null,
+            previousAnswer: null,
+          };
     default:
       throw new Error("Action unknown");
   }
@@ -98,7 +116,6 @@ export const TestContainer = () => {
     <QuestionsContStyles id="testContainer">
       {status === "active" ? (
         <>
-          <div>Current Score: {points}</div>
           <Questions
             question={questions[index]}
             dispatch={dispatch}
@@ -107,6 +124,8 @@ export const TestContainer = () => {
           />
           <NextBtn dispatch={dispatch} answer={answer} />
         </>
+      ) : status === "finished" ? (
+        <Result points={points} />
       ) : (
         <Heading content={"Are you ready?"} visually={true} />
       )}
