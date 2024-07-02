@@ -40,5 +40,6 @@ export const AnswerBtn = styled.button`
   &:hover {
     transform: translateY(-5px);
     cursor: pointer;
+    color: var(--primary)
   }
 `
