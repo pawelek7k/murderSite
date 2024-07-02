@@ -34,7 +34,7 @@ export const Hero = () => {
                 res={false}
               />
 
-              <LookUp link={""} content={"learn more"} />
+              <LookUp link="#TheoriesSection" content={"learn more"} />
               <ImArrowDown2 className="ArrowDown" />
             </StyledWrapperLink>
 

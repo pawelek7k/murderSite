@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Woman from "../../../images/modal_bg.jpg";
 
 export const StyledIntroduction = styled.section`
-padding: 15rem 3rem;
+padding: 15rem 3rem 10rem 3rem;
  @media (max-width: 900px) {
     padding: 10rem .5rem 5rem .5rem;
   }

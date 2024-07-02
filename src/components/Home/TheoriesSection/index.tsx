@@ -20,7 +20,7 @@ import {
 
 export const TheoriesSection = () => {
   return (
-    <Section>
+    <Section id="TheoriesSection">
       <HeadingWrapper>
         <Image
           src={LogoIlluminati}

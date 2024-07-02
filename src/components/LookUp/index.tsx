@@ -6,5 +6,18 @@ interface LookUpProps {
 }
 
 export const LookUp = ({ link, content }: LookUpProps) => {
-  return <StyledLink href={link}>{content}</StyledLink>;
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const sectionId = link.substring(1);
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <StyledLink href={link} onClick={handleLinkClick}>
+      {content}
+    </StyledLink>
+  );
 };
