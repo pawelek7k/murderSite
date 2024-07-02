@@ -1,5 +1,5 @@
 import { Heading } from "../../../Heading/h2";
-import { CategoryText } from "../Styles";
+import { CategoryText, ResultWrapper } from "../Styles";
 
 interface ResultProps {
   points: number;
@@ -36,10 +36,10 @@ export const Result = ({ points }: ResultProps) => {
   return (
     <div>
       <Heading content={"Test Complete!"} visually={true} />
-      <ul>
-        <CategoryText isHighRisk={isHighRisk}>{category}</CategoryText>
+      <ResultWrapper>
+        <CategoryText $isHighRisk={isHighRisk}>{category}</CategoryText>
         <li>{description}</li>
-      </ul>
+      </ResultWrapper>
     </div>
   );
 };

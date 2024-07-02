@@ -44,7 +44,16 @@ export const AnswerBtn = styled.button`
   }
 `
 
-export const CategoryText = styled.li<{ isHighRisk: boolean }>`
-color: ${(props) => (props.isHighRisk ? 'red' : "inherit")};
-font-weight:  ${(props) => (props.isHighRisk ? 600 : "inherit")};
+export const CategoryText = styled.li<{ $isHighRisk: boolean }>`
+color: ${(props) => (props.$isHighRisk ? 'red' : "inherit")};
+font-weight:  ${(props) => (props.$isHighRisk ? 600 : "inherit")};
 `;
+
+export const ResultWrapper = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing)
+`
