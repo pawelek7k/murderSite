@@ -10,7 +10,6 @@ import { QuestionsContStyles } from "./Styles";
 type Question = {
   question: string;
   options: string[];
-  correctOption: number;
   points: number[];
 };
 
@@ -63,7 +62,7 @@ function reducer(state: State, action: Action): State {
 }
 
 export const TestContainer = () => {
-  const [{ questions, status, index, answer }, dispatch] = useReducer(
+  const [{ questions, status, index, answer, points }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -83,7 +82,6 @@ export const TestContainer = () => {
         const data = result.data.map((item: any) => ({
           question: item.question,
           options: Object.keys(item.answers),
-          correctOption: null,
           points: Object.values(item.answers),
         }));
 
@@ -100,6 +98,7 @@ export const TestContainer = () => {
     <QuestionsContStyles id="testContainer">
       {status === "active" ? (
         <>
+          <div>Current Score: {points}</div>
           <Questions
             question={questions[index]}
             dispatch={dispatch}
