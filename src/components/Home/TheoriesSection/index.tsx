@@ -26,16 +26,16 @@ export const TheoriesSection = () => {
           src={LogoIlluminati}
           alt={"conspiracy theory logo"}
           width={100}
-          res={false}
+          res={true}
         />
-        <TimeComponent />
+        <TimeComponent res={true} />
         <Heading content={"Conspiracy theories"} visually={true} />
-        <TimeComponent />
+        <TimeComponent res={true} />
         <Image
           src={LogoIlluminati}
           alt={"conspiracy theory logo"}
           width={100}
-          res={false}
+          res={true}
         />
       </HeadingWrapper>
 

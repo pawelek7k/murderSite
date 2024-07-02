@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { Container } from "./Styles";
 
-export const TimeComponent = () => {
+interface TimeComponentProps {
+  res: boolean;
+}
+
+export const TimeComponent = ({ res }: TimeComponentProps) => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
@@ -12,5 +16,5 @@ export const TimeComponent = () => {
     return () => clearInterval(timer);
   }, []);
 
-  return <Container>{currentTime.toLocaleTimeString()}</Container>;
+  return <Container $res={res}>{currentTime.toLocaleTimeString()}</Container>;
 };
