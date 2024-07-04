@@ -29,7 +29,8 @@ export const TheoriesSection = () => {
           res={true}
         />
         <TimeComponent res={true} />
-        <Heading content={"Conspiracy theories"} visually={true} />
+
+        <Heading $visually={true}>Conspiracy theories</Heading>
         <TimeComponent res={true} />
         <Image
           src={LogoIlluminati}

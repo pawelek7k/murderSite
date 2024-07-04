@@ -25,7 +25,7 @@ export const Questions = ({
 }: QuestionsProps) => {
   return (
     <QuestionWrapper>
-      <Heading content={question.question} visually={true} />
+      <Heading $visually={true}>{question.question}</Heading>
       <Length numQuestions={numQuestions} />
       <Options options={question.options} dispatch={dispatch} answer={answer} />
     </QuestionWrapper>

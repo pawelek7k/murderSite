@@ -73,7 +73,7 @@ export const ArticlesCard = () => {
           {filteredArticles.map((article) => (
             <CardContainer key={article.id}>
               <Link
-                to={`/Iceberg/id=${article.id}`}
+                to={`/Iceberg/articles/${article.id}`}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <h3>{article.title}</h3>

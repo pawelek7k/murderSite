@@ -15,12 +15,6 @@ export const StyledSlider = styled.div`
 }
 }
 
-h3 {
-    font-family: var(--secondary-font);
-    letter-spacing: 2px;
-    font-size: 1.5rem;
-    color: var(--primary);
-}
 
 p {
     letter-spacing: 1px;

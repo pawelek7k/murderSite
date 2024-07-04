@@ -35,7 +35,7 @@ export const Result = ({ points }: ResultProps) => {
 
   return (
     <div>
-      <Heading content={"Test Complete!"} visually={true} />
+      <Heading $visually={true}>Test Complete!</Heading>
       <ResultWrapper>
         <CategoryText $isHighRisk={isHighRisk}>{category}</CategoryText>
         <li>{description}</li>

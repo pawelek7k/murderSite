@@ -1,11 +1,11 @@
 import { BsSpotify } from "react-icons/bs";
 import { ImFacebook2, ImGithub, ImYoutube } from "react-icons/im";
+import { HeadingH3 } from "../../Heading/h3";
 import { Link } from "../../Link";
 import { Logo } from "../../Logo";
 import { Paragraph } from "../../Paragraph";
 import {
   CopyRightWrapper,
-  Heading,
   IconWrapper,
   LogoWrapper,
   SocialWrapper,
@@ -24,7 +24,7 @@ export const FooterInformation = () => {
         />
       </LogoWrapper>
       <SocialWrapper>
-        <Heading>Our Social Media</Heading>
+        <HeadingH3>Our Social Media</HeadingH3>
         <IconWrapper>
           <Link
             href={"https://github.com/pawelek7k/murderSite"}

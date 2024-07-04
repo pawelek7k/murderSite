@@ -127,7 +127,7 @@ export const TestContainer = () => {
       ) : status === "finished" ? (
         <Result points={points} />
       ) : (
-        <Heading content={"Are you ready?"} visually={true} />
+        <Heading $visually={true}>Are you ready?</Heading>
       )}
       {status === "loading" && <Loader />}
       {status === "error" && <ErrorComp />}

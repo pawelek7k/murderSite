@@ -25,7 +25,7 @@ export const Modal = ({ onClose, show }: ModalProps) => {
               <IoClose />
             </CloseButton>
             <HeadingWrapper>
-              <Heading content={"Subscribe for crime news!"} visually={true} />
+              <Heading $visually={true}>Subscribe for crime news!</Heading>
               <Form />
             </HeadingWrapper>
           </CardContent>

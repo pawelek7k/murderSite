@@ -12,7 +12,8 @@ export const Quotes = () => {
     <>
       <StyledQuotes>
         <ParallaxText baseVelocity={-5}>Police line do not cross</ParallaxText>
-        <Heading content={"Quotes"} visually={false} />
+        <Heading $visually={false}>Quotes</Heading>
+
         <StyledQuoteIconLeft />
         <Slider />
         <StyledQuoteIconRight />

@@ -31,12 +31,6 @@ export const LogoWrapper = styled.div`
   gap: 1rem;
 `;
 
-export const Heading = styled.h3`
-  font-family: var(--secondary-font);
-  letter-spacing: 2px;
-  font-size: 2rem;
-`;
-
 export const SocialWrapper = styled.div`
   display: flex;
   flex-direction: column;

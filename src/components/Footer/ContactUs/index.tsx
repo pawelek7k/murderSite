@@ -15,7 +15,7 @@ export const ContactUs = () => {
       <MouseEffect>
         <Wrapper>
           <HeadingWrapper>
-            <Heading content={"Contact us!"} visually={true} />
+            <Heading $visually={true}>Contact us!</Heading>
             <Paragraph
               content={
                 "a laudantium rem saepe eius, qui aspernatur deserunt maiores perferendis, laboriosam culpa reiciendis."
