@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { ErrorComp } from "../../Error";
 import { Loader } from "../../Loader";
 import { InputComponent } from "../Input";
@@ -71,8 +72,13 @@ export const ArticlesCard = () => {
         <CardsList>
           {filteredArticles.map((article) => (
             <CardContainer key={article.id}>
-              <h3>{article.title}</h3>
-              <p>{article.description}</p>
+              <Link
+                to={`/Iceberg/id=${article.id}`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <h3>{article.title}</h3>
+                <p>{article.description}</p>
+              </Link>
             </CardContainer>
           ))}
         </CardsList>
