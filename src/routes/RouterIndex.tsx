@@ -14,7 +14,7 @@ export const RouterIndex = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Test" element={<Test />} />
         <Route path="/Iceberg" element={<Iceberg />} />
-        <Route path="/Iceberg/:id" element={<ArticleDetails />} />
+        <Route path="/Iceberg/articles/:id" element={<ArticleDetails />} />
       </Routes>
     </BrowserRouter>
   );
