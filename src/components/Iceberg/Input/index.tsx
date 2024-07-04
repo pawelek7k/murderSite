@@ -1,7 +1,11 @@
 import { nanoid } from "nanoid";
 import { useState } from "react";
-import { Input } from "../../Footer/Form/Styles";
-import { InputField, Label } from "../../Home/Newsletter/Modal/Form/StyledForm";
+import {
+  Input,
+  InputField,
+  Label,
+} from "../../Home/Newsletter/Modal/Form/StyledForm";
+import { InputContainer } from "./Styles";
 
 export const InputComponent = () => {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
@@ -9,24 +13,26 @@ export const InputComponent = () => {
   const searchId = nanoid();
 
   return (
-    <InputField>
-      <Input
-        type="text"
-        id={searchId}
-        required
-        onFocus={() => setIsSearchFocused(true)}
-        onBlur={(e: { target: { value: string } }) => {
-          setIsSearchFocused(false);
-          setHasSearchValue(e.target.value !== "");
-        }}
-      />
-      <Label
-        htmlFor={searchId}
-        $isFocused={isSearchFocused}
-        $hasValue={hasSearchValue}
-      >
-        Search articles
-      </Label>
-    </InputField>
+    <InputContainer>
+      <InputField>
+        <Input
+          type="text"
+          id={searchId}
+          required
+          onFocus={() => setIsSearchFocused(true)}
+          onBlur={(e: { target: { value: string } }) => {
+            setIsSearchFocused(false);
+            setHasSearchValue(e.target.value !== "");
+          }}
+        />
+        <Label
+          htmlFor={searchId}
+          $isFocused={isSearchFocused}
+          $hasValue={hasSearchValue}
+        >
+          Search articles
+        </Label>
+      </InputField>
+    </InputContainer>
   );
 };
