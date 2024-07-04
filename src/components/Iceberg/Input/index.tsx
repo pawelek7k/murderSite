@@ -7,10 +7,27 @@ import {
 } from "../../Home/Newsletter/Modal/Form/StyledForm";
 import { InputContainer } from "./Styles";
 
-export const InputComponent = () => {
+interface InputProps {
+  onSearch: (searchTerm: string) => void;
+}
+
+export const InputComponent = ({ onSearch }: InputProps) => {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [hasSearchValue, setHasSearchValue] = useState(false);
   const searchId = nanoid();
+
+  const handleBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsSearchFocused(false);
+    setHasSearchValue(e.target.value !== "");
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const searchTerm = e.target.value;
+    if (onSearch) {
+      onSearch(searchTerm);
+    }
+    setHasSearchValue(searchTerm !== "");
+  };
 
   return (
     <InputContainer>
@@ -20,10 +37,8 @@ export const InputComponent = () => {
           id={searchId}
           required
           onFocus={() => setIsSearchFocused(true)}
-          onBlur={(e: { target: { value: string } }) => {
-            setIsSearchFocused(false);
-            setHasSearchValue(e.target.value !== "");
-          }}
+          onBlur={handleBlur}
+          onChange={handleChange}
         />
         <Label
           htmlFor={searchId}

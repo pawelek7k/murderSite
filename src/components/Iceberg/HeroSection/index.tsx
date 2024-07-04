@@ -1,12 +1,12 @@
 import { Heading } from "../../Heading/h1";
-import { InputComponent } from "../Input";
+import { ArticlesCard } from "../ArticlesCard";
 import { HeroStyles } from "./HeroStyles";
 
 export const Hero = () => {
   return (
     <HeroStyles>
-      <InputComponent />
       <Heading content={"Iceberg serial killers"} />
+      <ArticlesCard />
     </HeroStyles>
   );
 };
