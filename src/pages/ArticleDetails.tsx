@@ -55,7 +55,7 @@ export const ArticleDetails = () => {
   return (
     <Main>
       <DetailsContainer>
-        <Heading $visually={true}>article.title</Heading>
+        <Heading $visually={true}>{article.title}</Heading>
         <DataWrapper>
           <p>{article.date}</p>
           <p>{article.location}</p>
