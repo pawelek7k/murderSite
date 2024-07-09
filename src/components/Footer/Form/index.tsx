@@ -77,7 +77,7 @@ export const Form = () => {
           $isFocused={isTextAreaFocused}
           $hasValue={hasTextAreaValue}
         >
-          How can we help you?
+          How can we help you??
         </Label>
       </InputField>
       <Button content={"Submit"} bg={true} />
