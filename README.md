@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Iceberg - Serial Killer Information App and Personality Quiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KillerApp is a React application designed to provide detailed information about various serial killers. This application serves as a comprehensive database and educational tool for those interested in criminal psychology and criminology.
 
-Currently, two official plugins are available:
+## Features
+- User Interface: Developed using React and styled-components for a modern and responsive UI.
+- API Integration: API built with Docker for containerization, tested using Postman, and backed by a SQL database.
+- Detailed Profiles: Extensive data on serial killers, including biographies, crime details, and psychological profiles.
+- Introduction to Murders: A comprehensive introduction section providing context and background information about serial murders.
+- Personality Quiz: An interactive quiz to assess psychopathy traits.
+- Articles: A collection of articles exploring the lives and crimes of various serial killers.
+## Tech Stack
+- TypeScript (TS): Ensures robust type-checking and improved developer experience.
+- React: Front-end library for building the user interface.
+- styled-components: Enables CSS-in-JS for styling React components.
+- Docker: Containerization of the API for consistent and reproducible environments.
+- Postman: Used for testing and documenting the API.
+- pgAdmin: Database management tool for PostgreSQL.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Api:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- <a href="https://github.com/pawelek7k/Iceberg-Server">Iceberg Server </a>
