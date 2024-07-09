@@ -72,3 +72,8 @@ export const Textarea = styled.textarea`
     font-size: 14px;
   }
 `;
+
+export const ResponseWrapper = styled.div`
+  text-align: center;
+  margin-top: 1rem;
+`

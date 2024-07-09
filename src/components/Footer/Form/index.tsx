@@ -1,5 +1,6 @@
+import axios from "axios";
 import { nanoid } from "nanoid";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { Button } from "../../Button";
 import {
   Input,
@@ -8,6 +9,7 @@ import {
   StyledForm,
   TextArea,
 } from "../../Home/Newsletter/Modal/Form/StyledForm";
+import { ResponseWrapper } from "./Styles";
 
 export const Form = () => {
   const [isNameFocused, setIsNameFocused] = useState(false);
@@ -16,18 +18,34 @@ export const Form = () => {
   const [hasEmailValue, setHasEmailValue] = useState(false);
   const [isTextAreaFocused, setIsTextAreaFocused] = useState(false);
   const [hasTextAreaValue, setHasTextAreaValue] = useState(false);
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [response, setResponse] = useState<string>("");
 
   const textAreaId = nanoid();
   const emailId = nanoid();
   const nameId = nanoid();
 
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("/send-email", { name, email, message });
+      setResponse(res.data.message);
+    } catch {
+      setResponse("Error sending email.");
+    }
+  };
+
   return (
-    <StyledForm>
+    <StyledForm onSubmit={handleSubmit}>
       <InputField>
         <Input
           type="text"
           id={nameId}
           required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           onFocus={() => setIsNameFocused(true)}
           onBlur={(e) => {
             setIsNameFocused(false);
@@ -47,6 +65,8 @@ export const Form = () => {
           type="email"
           id={emailId}
           required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           onFocus={() => setIsEmailFocused(true)}
           onBlur={(e) => {
             setIsEmailFocused(false);
@@ -66,6 +86,8 @@ export const Form = () => {
           required
           id={textAreaId}
           name="textarea"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           onFocus={() => setIsTextAreaFocused(true)}
           onBlur={(e) => {
             setIsTextAreaFocused(false);
@@ -81,6 +103,7 @@ export const Form = () => {
         </Label>
       </InputField>
       <Button content={"Submit"} bg={true} />
+      <ResponseWrapper>{response}</ResponseWrapper>
     </StyledForm>
   );
 };
