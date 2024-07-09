@@ -4,7 +4,7 @@ export const Section = styled.section`
     padding: 5rem;
     @media (max-width: 800px) {
     flex-direction: column;
-    padding: 3rem;
+    padding: 3rem 0rem;
     }
 
 `
@@ -25,6 +25,7 @@ export const ContentContainer = styled.div`
      flex-direction: row;
     @media (max-width: 800px) {
     flex-direction: column;
+    gap: 0rem;
     }
 
 `
