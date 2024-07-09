@@ -16,7 +16,6 @@ export const Form = () => {
   const [hasEmailValue, setHasEmailValue] = useState(false);
   const [isTextAreaFocused, setIsTextAreaFocused] = useState(false);
   const [hasTextAreaValue, setHasTextAreaValue] = useState(false);
-  const [name, setName] = useState("");
 
   const textAreaId = nanoid();
   const emailId = nanoid();
