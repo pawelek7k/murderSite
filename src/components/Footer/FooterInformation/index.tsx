@@ -35,7 +35,7 @@ export const FooterInformation = () => {
         </IconWrapper>
       </SocialWrapper>
       <CopyRightWrapper>
-        <Paragraph>"CopyRight©2024 - Klaudia Pawełek"</Paragraph>
+        <Paragraph>CopyRight©2024 - Klaudia Pawełek</Paragraph>
       </CopyRightWrapper>
     </Wrapper>
   );
