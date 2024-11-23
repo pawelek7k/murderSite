@@ -32,11 +32,11 @@ export const Newsletter = () => {
   return (
     <Section>
       <Heading $visually={true}>Newsletter</Heading>
-      <Paragraph
-        content={
-          " Lorem ipsum dolor sit amet, consectetur adipisicing elit.  temporibus consequatur laudantium, minus veritatis aliquam vero suscipit molestiae obcaecati tempore. Incidunt, numquam libero!"
-        }
-      />
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. temporibus
+        consequatur laudantium, minus veritatis aliquam vero suscipit molestiae
+        obcaecati tempore. Incidunt, numquam libero!
+      </Paragraph>
       <Button
         content={"Subscribe"}
         bg={true}

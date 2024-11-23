@@ -30,11 +30,9 @@ export const Hero = ({ onStartClick }: HeroProps) => {
         </StyledWrapperLogos>
       </motion.div>
       <HeadingWrapper>
-        <Paragraph
-          content={
-            " Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
-          }
-        />
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </Paragraph>
         <Heading content={"Get to know yourself."} />
         <Button content="Start" onClick={onStartClick} bg={true} />
       </HeadingWrapper>

@@ -16,11 +16,10 @@ export const ContactUs = () => {
         <Wrapper>
           <HeadingWrapper>
             <Heading $visually={true}>Contact us!</Heading>
-            <Paragraph
-              content={
-                "a laudantium rem saepe eius, qui aspernatur deserunt maiores perferendis, laboriosam culpa reiciendis."
-              }
-            />
+            <Paragraph>
+              a laudantium rem saepe eius, qui aspernatur deserunt maiores
+              perferendis, laboriosam culpa reiciendis.
+            </Paragraph>
           </HeadingWrapper>
           <FormWrapper>
             <Form />

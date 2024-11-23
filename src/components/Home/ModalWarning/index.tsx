@@ -26,11 +26,10 @@ export const ModalWarning: React.FC<ModalProps> = ({ show, onClose }) => {
           </CloseButton>
           <HeadingWrapper>
             <Heading content={"Warning"} />
-            <Paragraph
-              content={
-                "This website contains content about murders that may not be suitable for all audiences. Viewer discretion is advised."
-              }
-            />
+            <Paragraph>
+              This website contains content about murders that may not be
+              suitable for all audiences. Viewer discretion is advised.
+            </Paragraph>
             <Button content={"I understand"} bg={false} onClick={onClose} />
           </HeadingWrapper>
         </MouseEffect>

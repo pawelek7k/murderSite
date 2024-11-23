@@ -60,7 +60,7 @@ export const ArticleDetails = () => {
           <p>{article.date}</p>
           <p>{article.location}</p>
         </DataWrapper>
-        <Paragraph content={article.description} />
+        <Paragraph>{article.description}</Paragraph>
         <HeadingH3>Victims:</HeadingH3>
         <VictimsList>
           {article.victims.map((victim: string, index: number) => (

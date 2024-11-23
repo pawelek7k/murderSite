@@ -43,11 +43,9 @@ export const Hero = () => {
         </motion.div>
 
         <HeadingWrapper>
-          <Paragraph
-            content={
-              " Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
-            }
-          />
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </Paragraph>
           <Heading content={"A revelation of human nature."} />
         </HeadingWrapper>
       </Section>

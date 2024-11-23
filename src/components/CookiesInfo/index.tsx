@@ -12,11 +12,10 @@ export const CookieInformation = ({
 }: CookieProps) => {
   return (
     <Container $show={showInfo}>
-      <Paragraph
-        content={
-          "Our website uses cookies to provide you with the best possible user experience."
-        }
-      />
+      <Paragraph>
+        Our website uses cookies to provide you with the best possible user
+        experience.
+      </Paragraph>
       <Button onClick={handleCloseInfo}>I understand</Button>
     </Container>
   );

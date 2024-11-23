@@ -17,11 +17,10 @@ export const FooterInformation = () => {
     <Wrapper>
       <LogoWrapper>
         <Logo positionOnPage={false} />
-        <Paragraph
-          content={
-            "a laudantium rem saepe eius, qui aspernatur deserunt maiores perferendis, laboriosam culpa reiciendis."
-          }
-        />
+        <Paragraph>
+          a laudantium rem saepe eius, qui aspernatur deserunt maiores
+          perferendis, laboriosam culpa reiciendis.
+        </Paragraph>
       </LogoWrapper>
       <SocialWrapper>
         <HeadingH3>Our Social Media</HeadingH3>
@@ -36,7 +35,7 @@ export const FooterInformation = () => {
         </IconWrapper>
       </SocialWrapper>
       <CopyRightWrapper>
-        <Paragraph content={"CopyRight©2024 - Klaudia Pawełek"} />
+        <Paragraph>"CopyRight©2024 - Klaudia Pawełek"</Paragraph>
       </CopyRightWrapper>
     </Wrapper>
   );

@@ -7,9 +7,9 @@ export const Hero = () => {
   return (
     <HeroStyles>
       <Heading content={"Iceberg serial killers"} />
-      <Paragraph
-        content={" Lorem ipsum dolor sit amet, consectetur adipisicing elit. "}
-      />
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      </Paragraph>
       <ArticlesCard />
     </HeroStyles>
   );
