@@ -35,7 +35,18 @@ export const Hero = () => {
               />
 
               <LookUp link="#TheoriesSection" content={"learn more"} />
-              <ImArrowDown2 className="ArrowDown" />
+              <motion.div
+                className="ArrowDown"
+                animate={{ y: [0, 10, 0] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                }}
+              >
+                <ImArrowDown2 />
+              </motion.div>
             </StyledWrapperLink>
 
             <Image src={AngelRight} alt={"ok"} width={200} res={true} />
