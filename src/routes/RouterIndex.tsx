@@ -12,9 +12,9 @@ export const RouterIndex = () => {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Test" element={<Test />} />
-        <Route path="/Iceberg" element={<Iceberg />} />
-        <Route path="/Iceberg/articles/:id" element={<ArticleDetails />} />
+        <Route path="/test" element={<Test />} />
+        <Route path="/iceberg" element={<Iceberg />} />
+        <Route path="/iceberg/articles/:id" element={<ArticleDetails />} />
       </Routes>
     </BrowserRouter>
   );

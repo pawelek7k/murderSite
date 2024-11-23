@@ -36,10 +36,10 @@ export const Navigation = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/Test">Test</NavLink>
+            <NavLink to="/test">Test</NavLink>
           </li>
           <li>
-            <NavLink to="/Iceberg">Iceberg</NavLink>
+            <NavLink to="/iceberg">Iceberg</NavLink>
           </li>
         </ListNavigation>
       </nav>
