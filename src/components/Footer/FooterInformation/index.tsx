@@ -12,6 +12,25 @@ import {
   Wrapper,
 } from "./Styles";
 
+const socialLinks = [
+  {
+    href: "https://github.com/pawelek7k/murderSite",
+    icon: <ImGithub />,
+  },
+  {
+    href: "https://www.facebook.com/",
+    icon: <ImFacebook2 />,
+  },
+  {
+    href: "https://www.youtube.com/",
+    icon: <ImYoutube />,
+  },
+  {
+    href: "https://open.spotify.com/",
+    icon: <BsSpotify />,
+  },
+];
+
 export const FooterInformation = () => {
   return (
     <Wrapper>
@@ -25,13 +44,9 @@ export const FooterInformation = () => {
       <SocialWrapper>
         <HeadingH3>Our Social Media</HeadingH3>
         <IconWrapper>
-          <Link
-            href={"https://github.com/pawelek7k/murderSite"}
-            content={<ImGithub />}
-          />
-          <Link href={"https://www.facebook.com/"} content={<ImFacebook2 />} />
-          <Link href={"https://www.youtube.com/"} content={<ImYoutube />} />
-          <Link href={"https://open.spotify.com/"} content={<BsSpotify />} />
+          {socialLinks.map((social, index) => (
+            <Link key={index} href={social.href} content={social.icon} />
+          ))}
         </IconWrapper>
       </SocialWrapper>
       <CopyRightWrapper>
